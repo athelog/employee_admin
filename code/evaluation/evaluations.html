@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<!-- <html lang="en"> -->
+<html ng-app="fetch">
+
+<style>
+#content_panel {
+
+}
+</style>
+
+<head>
+	<title>Evaluaciones</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+	<link href="style.css" rel="stylesheet" />
+    <script data-semver="1.2.13" src="http://code.angularjs.org/1.2.13/angular.js" data-require="angular.js@1.2.x"></script>
+    <script src="eval_app.js"></script>
+ 
+</head>
+
+
+<body> 
+
+<div id="EvaluationController" ng-controller="dbCtrl" ng-init="Init('Patient')" >
+	
+	<div class="container">
+	  <h2>Evaluaciones</h2>
+	  <p>To make the tabs toggleable, add the data-toggle="tab" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
+
+	  <div class="panel panel-default">
+		<div class="panel-body" id="content_panel">
+	  <ul class="nav nav-tabs">
+		<li class="active"><a data-toggle="tab" href="#Tab_Perfil">Perfil</a></li>
+                <li><a data-toggle="tab" href="#Tab_Historial">Historial</a></li>
+		<li><a data-toggle="tab" href="#Tab_VarsFis">Variables<br>Fisiologicas.</a></li>
+		<li><a data-toggle="tab" href="#Tab_CompCorp">Composicion<br>Corporal</a></li>
+		<li><a data-toggle="tab" href="#Tab_Cuestionarios">Cuestionarios</a></li>
+		<li><a data-toggle="tab" href="#Tab_Individualizacion">Individualizacion</a></li>
+		<li><a data-toggle="tab" href="#Tab_Adjuntos">Archivos<br>Adjuntos</a></li>
+		<li><a data-toggle="tab" href="#Tab_Fisioterapia">Fisioterapia</a></li>
+		<li><a data-toggle="tab" href="#Tab_Nutricion">Nutricion</a></li>
+		<li><a data-toggle="tab" href="#Tab_Ayuda">Ayuda</a></li>
+	  </ul>
+	  
+	 
+
+
+	<!--  
+
+	1. TABS  (EVALUACIONES)
+	1.1.Tab de APP
+	1.2.Tab de APNP
+	1.3.Tab de AQX
+	1.4.Tab de Medicamentos
+	1.5.Tab de Lesiones
+	1.6.Tab de Variables Fisiológicas
+	1.7.Tab de Composión corporal
+	1.8.Tab de Cuestionarios
+
+	-->
+
+
+	
+	  <div class="tab-content">
+
+                <!-- TAB PERFIL------>
+                <div id="Tab_Perfil" class="tab-pane active">
+                
+                    <br> 
+                    <form name="PatientForm">
+
+                            <table border="1px">
+                            <!--FIXME:delete all ng-repeat and correct "valor actual"-->	
+
+                                    <tr>
+                                            <th>Dato</th>
+                                            <th>Valor actual</th>
+
+                                    </tr>
+                                    <tr>
+                                            <th>Cedula</th>
+                                            <td ng-repeat="patients in PatientData">{{patients.PatientID}}</td>
+                                    </tr>
+                                    <tr>
+                                            <th>Nombre</th>
+                                            <td ng-repeat="patients in PatientData">{{patients.Forename}}</td>
+                                    </tr>
+                                    <tr>
+                                            <th>Primer Apellido</th>
+                                            <td ng-repeat="patients in PatientData">{{patients.FirstSurname}}</td>
+                                    </tr>
+                                    <tr>
+                                            <th>Segundo Apellido</th>
+                                            <td ng-repeat="patients in PatientData">{{patients.SecondSurname}}</td>
+                                    </tr>
+                                    <tr>
+                                            <th>Email</th>
+                                            <td ng-repeat="patients in PatientData">{{patients.Email}}</td>
+                                    </tr>
+                                    <tr>
+                                            <th>Telefono</th>
+                                            <td ng-repeat="patients in PatientData">{{patients.Phone}}</td>
+                                    </tr>
+                                    <tr>
+                                            <th>Fecha Nacimiento(dd-mm-aaaa)</th>
+                                            <td ng-repeat="patients in PatientData">{{patients.BirthDate}}</td>
+                                    </tr>
+                                    <tr>
+                                            <th>Fecha entrada al programa</th>
+                                            <td ng-repeat="patients in PatientData">{{patients.JoinDate}}</td>
+                                    </tr>
+                                    <tr>
+                                            <th>Genero</th>
+                                            <td ng-repeat="patients in PatientData">{{patients.Gender}}</td>
+
+                                    </tr>
+                                    <tr>
+                                            <th>Direccion</th>
+                                            <td ng-repeat="patients in PatientData">{{patients.Address}}</td>
+                                    </tr>
+                                    <tr>
+                                            <th>ID Empresa</th>
+                                            <td ng-repeat="patients in PatientData">{{patients.CompanyID}}</td>
+                                    <tr>
+                                            <th>Departamento</th>
+                                            <td ng-repeat="patients in PatientData">{{patients.Department}}</td>
+                                    </tr>
+                                    <tr>
+                                            <th>Sede</th>
+                                            <td ng-repeat="patients in PatientData">{{patients.Site}}</td>
+                                    </tr>
+
+                            </table>	
+
+                            <!--<button ng-click="CreatePatient()">CreatePatient()</button>-->
+                            <!--<button ng-click="dg()">dg</button>-->
+
+                    </form>	                    
+                    
+                    
+                    
+                    
+                </div>
+                <!-- FIN DEL TAB DE PERFIL -->
+              
+		<!-- TAB HISTORIAL -->
+		<div id="Tab_Historial" class="tab-pane">
+		  <h3>Historial</h3>
+		  
+			<!-- Javascript code to print Date-->
+			<!--
+			<div ng-app ng-controller="Ctrl">
+				{{date | date:'yyyy-MM-dd'}}<br/>
+				<br>{{Nombre}}
+			</div>
+			
+			<div ng-app="">
+			  <div ng-controller="Ctrl">
+				  {{hi}}
+			  </div>
+			</div>
+			-->
+			
+			<!--
+			<div ng-controller="MainCtrl">
+				<p>Hello {{name}}!</p>
+			</div>
+			-->
+			
+			
+			
+			<!-- SUBMENU TABS A LA IZQUIERDA -->
+			<div class="row" style="min-height:300px;">
+				<div  class="col-sm-6">
+
+					<div class="col-xs-3">
+						<!-- required for floating -->
+						<!-- Nav tabs -->
+						
+
+									
+									<ul class="nav nav-tabs tabs-left">
+										<!--<li class="active"><a href="#home" data-toggle="tab">Home</a></li>-->
+										<li><a href="#Tab_APP" data-toggle="tab">APP</a></li>
+										<li><a href="#Tab_APNP" data-toggle="tab">APNP</a></li>
+										<li><a href="#Tab_AQX" data-toggle="tab">AQX</a></li>
+										<li><a href="#Tab_Medicamentos" data-toggle="tab">Medicamentos</a></li>
+										<li><a href="#Tab_Lesiones" data-toggle="tab">Lesiones</a></li>		
+										
+									</ul>
+
+
+
+
+							
+						
+					</div>
+					
+					<!-- SUBTABS DE ANTECEDENTES -->
+					<div class="col-xs-9">
+
+						<div class="tab-content">
+							<div class="tab-pane active" id="home">
+							
+								<h3>Home Tab</h3>
+							
+							</div>
+							
+							<div class="tab-pane" id="Tab_APP">
+								<h3>Antecedentes Patologicos</h3>
+								
+								<br><br>
+								<form>
+									<table border="1px">
+									
+										<tr>
+											<th>Antecedente</th>
+											<th>Valor Actual</th>
+											<th>Editar</th>
+
+										</tr>
+										<tr>
+											<th>Hipertension</th>
+											<td>FIXME:read dB</td>
+											<td>
+												<select name="HyprtsnSelect" class="form-control"  ng-model="Hyprtsn_Input_Model">											
+													<option value="INDEFINIDO">INDEFINIDO</option>
+													<option value="SI">SI</option>
+													<option value="NO">NO</option>
+												</select>
+											</td>
+											
+										</tr>
+										<tr>
+											<th>Diabetes</th>
+											<td>FIXME:read dB</td>
+											<td>
+												<select name="DbtsSelect" class="form-control"  ng-model="Dbts_Input_Model">
+													<option selected value="INDEFINIDO">INDEFINIDO</option>
+													<option value="SI">SI</option>
+													<option value="NO">NO</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<th>Cardiopatias</th>
+											<td>FIXME:read dB</td>
+											<td>
+												<select name="CrdmpthySelect" class="form-control"  ng-model="Crdmpthy_Input_Model">
+													<option selected value="INDEFINIDO">INDEFINIDO</option>
+													<option value="SI">SI</option>
+													<option value="NO">NO</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<th>Obesidad</th>
+											<td>FIXME:read dB</td>
+											<td>
+												<select name="ObstySelect" class="form-control"  ng-model="Obsty_Input_Model">
+													<option selected value="INDEFINIDO">INDEFINIDO</option>
+													<option value="SI">SI</option>
+													<option value="NO">NO</option>
+												</select>
+											</td>
+										</tr>
+                                                                                
+										<tr>
+											<th>Dislipidemia</th>
+                                                                                        <td>FIXME:read dB</td>
+											<td>
+												<select name="DyslpdmSelect" class="form-control"  ng-model="Dyslpdm_Input_Model">
+													<option selected value="INDEFINIDO">INDEFINIDO</option>
+													<option value="SI">SI</option>
+													<option value="NO">NO</option>
+												</select>
+											</td>
+										</tr>                                                                                
+                                                                                
+										<tr>
+											<th>Depresion</th>
+                                                                                        <td>FIXME:read dB</td>
+											<td>
+												<select name="DprssnSelect" class="form-control"  ng-model="Dprssn_Input_Model">
+													<option selected value="INDEFINIDO">INDEFINIDO</option>
+													<option value="SI">SI</option>
+													<option value="NO">NO</option>
+												</select>
+											</td>
+										</tr>                                                                                
+                                                                                
+										<tr>
+											<th>Tabaco</th>
+                                                                                        <td>FIXME:read dB</td>
+											<td>
+												<select name="TobaccoSelect" class="form-control"  ng-model="Tobacco_Input_Model">
+													<option selected value="INDEFINIDO">INDEFINIDO</option>
+													<option value="SI">SI</option>
+													<option value="NO">NO</option>
+												</select>
+											</td>
+										</tr> 
+                                                                                
+										<tr>
+											<th>Alcohol</th>
+                                                                                        <td>FIXME:read dB</td>
+											<td>
+												<select name="AlcoholSelect" class="form-control"  ng-model="Alcohol_Input_Model">
+													<option selected value="INDEFINIDO">INDEFINIDO</option>
+													<option value="SI">SI</option>
+													<option value="NO">NO</option>
+												</select>
+											</td>
+										</tr> 
+
+										<tr>
+											<th>Sedentarismo</th>
+                                                                                        <td>FIXME:read dB</td>
+											<td>
+												<select name="SdntrsmSelect" class="form-control"  ng-model="Sdntrsm_Input_Model">
+													<option selected value="INDEFINIDO">INDEFINIDO</option>
+													<option value="SI">SI</option>
+													<option value="NO">NO</option>
+												</select>
+											</td>
+										</tr> 
+                                                                                
+									</table>							
+
+                                                                        <br>
+                                                                        <td><textarea ng-model="APP_Cmmnt_Input_Model" rows="4" cols="30"></textarea></td>
+                                                                    
+									<br><br><button type="button">Guardar</button>
+									<br><button ng-click="dg()">Debug</button>
+								</form>
+								
+							</div>
+							
+							<div class="tab-pane" id="Tab_APNP">
+								<h3>Antecedentes No Patologicos</h3>
+								<br>Valor actual: (FIXME:leerlo de archivo o poner N/A)
+								<br><br>
+								<form>
+									<textarea ng-model="APNP_Cmmnt_Input_Model" rows="4" cols="30"></textarea>
+									<br><input type="checkbox" name="APNP_CheckBox" value="N/A">N/A
+									<br><br><button type="button">Guardar</button>
+								</form>
+								
+							</div>
+							
+							<div class="tab-pane" id="Tab_AQX">
+								<h3>Antecedentes Quirurgicos</h3>
+								
+								<br><br>Valor actual: (FIXME:leerlo de archivo o poner N/A)
+								<form>
+									<textarea ng-model="AQX_Cmmnt_Input_Model" rows="4" cols="30"></textarea>
+									<br><input type="checkbox" name="APNP_CheckBox" value="N/A">N/A
+									<br><br><button type="button">Guardar</button>
+								</form>			
+							</div>
+							
+							<div class="tab-pane" id="Tab_Medicamentos">
+								<h3>Medicamentos</h3>
+								
+								(FIXME:leerlo de archivo o poner N/A; imprimirlo en el textfield)
+								
+								<br><br>
+								<form>
+									<textarea ng-model="MED_Cmmt_Input_Model" rows="4" cols="30"></textarea>	
+									<br><button type="button">Actualizar</button>
+									<br><input type="checkbox" name="Medicamentos_chkbox" value="N/A">N/A
+									<br><br><button type="button">Guardar</button>
+								</form>
+							
+							</div>						
+
+							<div class="tab-pane" id="Tab_Lesiones">
+								<h3>Lesiones</h3>
+								
+								(FIXME:leerlo de archivo o poner N/A; imprimirlo en el textfield)
+								<br><br>							
+								
+								<form>
+									<textarea ng-model="INJ_Cmmt_Input_Model" rows="4" cols="30"></textarea>	
+									<br><button type="button">Actualizar</button>
+									<br><input type="checkbox" name="Lesiones_chkbox" value="N/A">N/A
+								</form>
+								
+							</div>
+							
+						</div>
+					</div>
+					<!-- FIN DE SUBTABS DE ANTECEDENTES -->
+					
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<!-- FIN DE SUBMENU TABS A LA IZQUIERDA -->
+		  
+		</div>
+		<!-- FIN DE TAB DE HISTORIAL -->
+		
+		<!-- TAB DE VARIABLES FISIOLOGICAS -->
+		<div id="Tab_VarsFis" class="tab-pane fade">
+		  <h3>Variables Fisiologicas</h3>
+
+			<h4>Ultimas medicion</h4>
+			<br>FIXME:read last 5 vars
+			
+			
+			<h4>Introducir nuevos valores</h4>
+			
+			<table border="1px">
+				
+				<tr>
+					<th>Variable
+					<th>Valor
+					<th>Unidad
+				</tr>
+				<tr>
+					<td>Frecuencia cardiaca</td>
+					<td><input name="PV_HeartRate_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="PV_HeartRate_Input_Model" required></td>
+					<td>lat/min</td>
+				</tr>                                
+				<tr>
+					<td>Presion Arterial</td>
+					<td><input name="PV_BldPrssr_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="PV_BldPrssr_Input_Model" required></td>
+					<td>mmHg</td>
+				</tr>
+				<tr>
+					<td>Glicemia</td>
+					<td><input name="PV_Glycemia_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="PV_Glycemia_Input_Model" required></td>
+					<td>mg/dl</td>
+				</tr>
+				<tr>
+					<td>SO2 (Saturacion de Oxigeno)</td>
+					<td><input name="PV_SO2_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="PV_SO2_Input_Model" required></td>
+					<td>%</td>
+				</tr>
+				<tr>
+					<td>CC (Circunferencia de Cadera)</td>
+					<td><input name="PV_WaistCirc_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="PV_WaistCirc_Input_Model" required></td>
+					<td>cm</td>
+				</tr>
+				<tr>
+					<td>VO2 max (Consumo de Oxigeno)</td>
+					<td><input name="PV_VO2Max_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="PV_VO2Max_Input_Model" required></td>
+					<td>ml/Kg/min</td>
+				</tr>
+                                
+				<tr>
+					<td>Otro(nombre de la variable):<input name="PV_OtherVarName_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="PV_OtherVarName_Input_Model" required></td>
+					<td><input name="PV_OtherVarValue_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="PV_OtherVarValue_Input_Model" required></td>
+					<td>N/A</td>
+				</tr>			
+                        
+                        
+                        </table>
+			<br><button ng-click="PV_Save()">Guardar</button>
+		  
+		  
+		</div>
+		<!-- FIN DE TAB DE VARIABLES FISIOLOGICAS -->
+		
+		<!-- TAB DE COMPOSICIÓN CORPORAL-->
+		<div id="Tab_CompCorp" class="tab-pane fade">
+			<h3>Composicion Corporal</h3>
+
+			<h4>Ultimas medicion</h4>
+			<br>FIXME:read last 5 vars
+			
+			
+			<h4>Introducir nuevos valores</h4>
+			
+			<table border="1px">
+				
+				<tr>
+					<th>Variable
+					<th>Valor
+					<th>Unidad
+				</tr>
+				<tr>
+					<td>Peso</td>
+					<td><input name="Weight_BC_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="Weight_BC_Input_Model" required></td>
+					<td>Kg</td>
+				</tr>
+				<tr>
+					<td>Grasa corporal</td>
+					<td><input name="FatMass_BC_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="FatMass_BC_Input_Model" required></td>
+					<td>Kg</td>
+				</tr>
+				<tr>
+					<td>Masa muscular</td>
+					<td><input name="MuscleMass_BC_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="MuscleMass_BC_Input_Model" required></td>
+					<td>Kg</td>
+				</tr>
+				<tr>
+					<td>Indice Masa Corporal</td>
+					<td><input name="BMI_BC_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="BMI_BC_Input_Model" required></td>
+					<td>Kg/m2</td>
+				</tr>
+				<tr>
+					<td>% Grasa</td>
+					<td><input name="FatPer_BC_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="FatPer_BC_Input_Model" required></td>
+					<td>%</td>
+				</tr>
+				<tr>
+					<td>InBody Score</td>
+					<td><input name="InBodyScore_BC_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="InBodyScore_BC_Input_Model" required></td>
+					<td>Puntos</td>
+				</tr>
+				<tr>
+					<td>Metabolismo Basal</td>
+					<td><input name="BasMet_BC_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="BasMet_BC_Input_Model" required></td>
+					<td>Kcal</td>
+				</tr>
+				<tr>
+					<td>Grasa visceral</td>
+					<td><input name="ViscFat_BC_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="ViscFat_BC_Input_Model" required></td>
+					<td>Puntos</td>
+				</tr>
+				<tr>
+					<td>Flexibilidad</td>
+					<td><input name="Flex_BC_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="Flex_BC_Input_Model" required></td>
+					<td>cm</td>
+				</tr>
+				<tr>
+					<td>Resistencia muscular</td>
+					<td><input name="MR_BC_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="MR_BC_Input_Model" required></td>
+					<td>???</td>
+				</tr>
+				<tr>
+					<td>Repeticiones</td>
+					<td><input name="Rep_BC_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="Rep_BC_Input_Model" required></td>
+					<td>Numero de repeticiones</td>
+				</tr>
+                          
+				<tr>
+					<td>Nivel de Hidratacion</td>
+					<td><input name="HydrtnLvl_BC_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="HydrtnLvl_BC_Input_Model" required></td>
+					<td>litros</td>
+				</tr>                                  
+				<tr>
+					<td>Peso Objetivo</td>
+					<td><input name="TrgtWght_BC_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="TrgtWght_BC_Input_Model" required></td>
+					<td>Kg</td>
+				</tr>                                 
+				<tr>
+					<td>Control de Grasa</td>
+					<td><input name="FatCntrl_BC_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="FatCntrl_BC_Input_Model" required></td>
+					<td>Kg</td>
+				</tr>   
+				<tr>
+					<td>Control de Musculo</td>
+					<td><input name="MsclCntrl_BC_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="MsclCntrl_BC_Input_Model" required></td>
+					<td>Kg</td>
+				</tr>
+				<tr>
+					<td>Otro(nombre de la variable):<input name="BC_OtherVarName_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="BC_OtherVarName_Input_Model" required></td>
+					<td><input name="BC_OtherVarValue_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="BC_OtherVarValue_Input_Model" required></td>
+					<td>N/A</td>
+				</tr>	
+				
+			</table>
+			<br><button ng-click="BC_Save()">Guardar</button>
+
+
+
+			
+		</div>
+		<!-- FIN DEL TAB DE COMPOSICIÓN CORPORAL -->	
+		
+		<!-- FIN DEL TAB DE CUESTIONARIOS-->
+		<div id="Tab_Cuestionarios" class="tab-pane">
+		
+		
+		</div>
+		<!-- FIN DEL TAB DE CUESTIONARIOS-->
+		
+		<!-- FIN DEL TAB DE INDIVIDUALIZACION-->
+		<div id="Tab_Individualizacion" class="tab-pane">
+                    <h3>Individualizacion</h3>
+                    <textarea ng-model="Ind_Cmmnt_Input_Model" rows="4" cols="30"></textarea>
+                </div>
+		<!-- FIN DEL TAB DE INDIVIDUALIZACION-->
+		
+		<!-- TAB DE ADJUNTOS-->
+		<div id="Tab_Adjuntos" class="tab-pane">
+                    <h3>Archivos adjuntos</h3>
+                    
+                    <!--
+                    <form action="../engine/FileManagement.php" method="post" enctype="multipart/form-data">
+                        Seleccione archivo para subir
+                        <input type="file" name="fileToUpload" id="fileToUpload">
+                        <input type="submit" value="Subir" name="submit">
+                    </form>                    
+                    -->
+                    
+                    <!-- <form enctype="multipart/form-data"> -->
+                    <label>Select File to Upload</label>
+                    <input id="file_to_upload" type="file" class="form-control" />
+                    </form>                    
+                    <button onclick="uploadFile()" class="btn btn-primary">Submit</button>
+
+                </div>
+		<!-- FIN DEL TAB DE ADJUNTOS-->	
+
+		<!-- TAB DE FISIOTERAPIA-->
+		<div id="Tab_Fisioterapia" class="tab-pane">
+                    <h3>Fisioterapia</h3>
+                    <textarea ng-model="PhysThrpy_Cmmnt_Input_Model" rows="4" cols="30"></textarea>
+
+		</div>
+		<!-- FIN DEL TAB DE FISIOTERAPIA-->
+
+		<!-- TAB DE NUTRICION-->
+		<div id="Tab_Nutricion" class="tab-pane">
+                    <h3>Nutricion</h3>
+                    <textarea ng-model="Ntrtn_Cmmnt_Input_Model" rows="4" cols="30"></textarea>
+		</div>
+		<!-- FIN DEL TAB DE NUTRICION-->
+		
+		<!-- FIN DEL TAB DE AYUDA-->
+		<div id="Tab_Ayuda" class="tab-pane">
+			<h3>Tips generales</h3>
+			<p>Introduzca cualquier criterio de busqueda en los campos y luego haga click sobre el boton de Busqueda </p>
+		</div>
+		<!-- FIN DEL TAB DE AYUDA-->
+		
+	  </div>
+	</div>
+
+	</div></div>
+	
+	</div><!--end of evaluation controller -->
+	
+
+</body>
+</html>

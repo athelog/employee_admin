@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pivot Demo</title>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+        <!-- external libs from cdnjs -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+        <!-- PivotTable.js libs from ../dist -->
+        <link rel="stylesheet" type="text/css" href="../dist/pivot.css">
+        <script type="text/javascript" src="../dist/pivot.js"></script>
+        <script type="text/javascript" src="../dist/gchart_renderers.js"></script>
+        <style>
+            body {font-family: Verdana;}
+        </style>
+
+        <!-- optional: mobile support with jqueryui-touch-punch -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+
+        <!-- for examples only! script to show code to user -->
+        <!--<script type="text/javascript" src="show_code.js"></script>-->
+        <script type="text/javascript" src="PivotChart_patient_individual_test.js"></script>
+      
+    </head>
+    <body>
+        <script type="text/javascript">
+    // This example adds Google Chart renderers.
+
+    google.load("visualization", "1", {packages:["corechart", "charteditor"]});
+
+        </script>
+
+       <!-- <p><a href="index.html">&laquo; back to PivotTable.js examples</a></p>-->
+
+        <div id="output" style="margin: 30px;"></div>
+
+    </body>
+</html>

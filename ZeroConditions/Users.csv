@@ -1,0 +1,14 @@
+﻿RowID;UserID;PassHash;Forename;MiddleName;FirstSurname;SecondSurname;Email;Phone;UserGroup;CompanyID;Status;LastMod;ModifierID;LastIP;FF
+0;131937220;1634364;Jose;Harold;Jimenez;Quesada;Jimenez@bac san jose.com;87445492;developer;bac san jose;TRUE;2017-01-14;616433553;211.151.205.6;
+1;730300606;2331883;Sofia;Sharon;Jimenez;Mora;Jimenez@cfia.com;81891387;editor;cfia;FALSE;2016-11-25;119719940;236.117.164.18;
+2;540296096;6463381;Sharon;Sharon;Jimenez;Quesada;Jimenez@bac san jose.com;85328719;technician;bac san jose;FALSE;2017-06-28;119719940;183.180.128.3;
+3;435037716;5274800;Erick;Nicole;Chaverria;Rodriguez;Chaverria@boston scientific.com;85440604;viewer;boston scientific;TRUE;2017-09-15;540296096;243.124.121.16;
+4;616433553;5896803;Ramiro;Nicole;Araya;Alvarez;Araya@hpe.com;89163665;none;hpe;FALSE;2016-04-12;129438171;149.138.159.6;
+5;444888697;5329467;Maria;Sofia;Salas;Alfaro;Salas@hpe.com;84964846;guess;hpe;FALSE;2017-06-24;119719940;152.118.158.6;
+6;459779329;5143083;Catalina;Sharon;Mora;Alvarez;Mora@bac san jose.com;88460476;technician;bac san jose;FALSE;2015-01-18;730300606;161.156.179.21;
+7;129438171;6117277;Fernanda;Sharon;Quesada;Gonzalez;Quesada@bac san jose.com;87547639;admin;bac san jose;TRUE;2015-04-21;459779329;198.164.222.29;
+8;119719940;9870342;Fernanda;Erick;Araya;Gonzalez;Araya@boston scientific.com;81182754;viewer;boston scientific;TRUE;2017-09-17;540296096;208.182.127.15;
+9;270049781;8108006;Maria;Ramiro;Rodriguez;Mora;Rodriguez@banco nacional.com;87277913;admin;banco nacional;TRUE;2015-09-08;444888697;210.152.125.30;
+10;362295981;5513947;Jorge;Nicole;Chaverria;Rodriguez;Chaverria@bac san jose.com;89533296;technician;bac san jose;FALSE;2016-08-07;129438171;190.120.166.4;
+11;345100213;5256865;Fernanda;Erick;Alfaro;Quesada;Alfaro@bac san jose.com;87183572;editor;bac san jose;TRUE;2015-03-25;444888697;176.202.148.4;
+12;594929479;2216806;Maria;Ana;Quesada;Mora;Quesada@cfia.com;82594518;editor;cfia;FALSE;2017-04-27;540296096;161.167.210.12;

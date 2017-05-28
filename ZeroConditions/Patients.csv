@@ -1,0 +1,12 @@
+RowID;PatientID;Forename;MiddleName;FirstSurname;SecondSurname;Email;Phone;BirthDate;JoinDate;Gender;Address;CompanyID;Department;Site;Status;Income;ModDate;ModifierID;LastIP;FFD
+0;522196702;Sharon;Jorge;Alvarez;Alfaro;Alvarez@intel.com;85839852;10/11/2015;9/2/2016;femenino;Nicoya;intel;oficina;Cartago;TRUE;764381;8/12/2015;616433553;134.149.136.14;
+1;127316339;Nicole;Sofia;Quesada;Araya;Quesada@intel.com;86526313;3/9/2017;14/5/2015;masculino;Limon;intel;Recursos humanos;Alajuela;FALSE;860198;6/11/2016;119719940;203.116.126.24;
+2;147401893;Nicole;Ana;Gonzalez;Araya;Gonzalez@IBM.com;85923024;23/9/2017;4/5/2016;femenino;Heredia;IBM;Recursos humanos;Liberia;TRUE;789307;18/2/2015;119719940;184.117.235.30;
+3;880444389;Maria;Catalina;Mora;Salas;Mora@IBM.com;84817440;30/5/2016;19/8/2016;masculino;Nicoya;IBM;Recursos humanos;San Carlos;TRUE;825043;12/4/2015;540296096;167.227.202.6;
+4;269887948;Erick;Harold;Salas;Alfaro;Salas@intel.com;82670124;17/7/2016;25/10/2016;femenino;Quepos;intel;contabilidad;Perez Zeledon;TRUE;822282;9/9/2017;444888697;109.235.151.30;
+5;720959266;Sharon;Erick;Alvarez;Quesada;Alvarez@mucap.com;83856602;26/9/2017;17/6/2015;masculino;Heredia;mucap;contabilidad;San Carlos;TRUE;560519;18/1/2017;270049781;236.125.177.23;
+6;281922193;Sofia;Sharon;Jimenez;Jimenez;Jimenez@banco nacional.com;80182781;21/1/2016;18/10/2016;masculino;Alajuela;banco nacional;Recursos humanos;Liberia;TRUE;835611;2/6/2016;131937220;119.143.250.1;
+7;394011441;Fernanda;Erick;Jimenez;Araya;Jimenez@panasonic.com;81390119;13/11/2017;5/6/2015;no especificado;San Jose;panasonic;Recursos humanos;Cartago;TRUE;902196;25/10/2016;459779329;100.157.156.21;
+8;346620123;Nicole;Maria;Chaverria;Jimenez;Chaverria@panasonic.com;87854152;18/5/2016;27/4/2016;masculino;Nicoya;panasonic;taller;Limon;FALSE;809568;24/7/2016;540296096;116.123.167.24;
+9;991853832;Nicole;Sharon;Mora;Mora;Mora@cfia.com;80325051;10/2/2015;21/2/2017;no especificado;Limon;cfia;oficina;San Jose;FALSE;936663;28/6/2017;540296096;186.254.255.29;
+10;153761257;Fernanda;Sharon;Chaverria;Rodriguez;Chaverria@intel.com;89871732;14/4/2017;24/4/2017;masculino;San Jose;intel;oficina;Perez Zeledon;TRUE;469351;8/12/2015;730300606;128.224.148.4;

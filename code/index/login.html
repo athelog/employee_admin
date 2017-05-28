@@ -1,0 +1,299 @@
+
+	<html ng-app="fetch">
+	<!--<head> -->
+
+		
+		<title>Login</title> 
+		<meta charset="utf-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js"></script>
+		<script type="text/javascript" src="login_app.js"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+			
+	<!-- </head> -->
+	  
+	  
+	<style>
+	div.container {
+		width: 100%;
+		border: 1px solid gray;
+	}
+
+	<!--
+	footer {
+		padding: 1em;
+		color: white;
+		background-color:  #1e8449  ;
+		clear: left;
+		text-align: center;
+	}
+	-->
+
+	<!--
+	header {
+
+		padding: 1em;
+		color: white;
+		background-color:   #2e86c1 ;
+		clear: left;
+		text-align: center;
+
+	}
+	-->
+
+	nav {
+		float: left;
+		max-width: 160px;
+		margin: 0;
+		padding: 1em;
+	}
+
+	nav ul {
+		list-style-type: none;
+		padding: 0;
+	}
+				
+	nav ul a {
+		text-decoration: none;
+	}
+
+	article {
+		margin-left: 170px;
+		border-left: 1px solid gray;
+		padding: 1em;
+		overflow: hidden;
+	}
+
+	#menu_bar{
+
+		#padding: 1em;
+		color: white;
+		background-color:   #707b7c  ;
+		clear: left;
+		text-align: right;
+		
+	}
+
+	#top_bar{
+
+		/*#padding: 1em;*/
+		color: white;
+		background-color:   #707b7c  ;
+		clear: left;
+		text-align: right;
+		
+	}
+
+	#header_area{
+
+		padding: 1em;
+		color: white;
+		background-color:   #2e86c1 ;
+		clear: left;
+		text-align: center;
+		
+	}
+
+
+	#footer_bar {
+
+		padding: 1em;
+		color: white;
+		background-color:  #1e8449  ;
+		clear: left;
+		text-align: center;
+	}
+
+	#form_div{
+	  
+		width: 200px;
+		align: center;
+		margin: 0 auto;
+	}
+
+	.modal-popup{
+		margin: 20px;
+	}
+	</style>
+
+
+
+
+
+	<!-- <body ng-controller="dbCtrl"> -->
+	<body >
+
+            <div id="PatientController" ng-controller="dbCtrl" ng-init="Init('Patient')" >
+                
+                <!-- TOP BAR --------------------->
+                <div id="top_bar" class="container">
+
+                        <ul>
+                                <a href="#">BICOYED Costa Rica</a>
+                                <a href="#">Contacto +506 2253 5555, agomez@bicoyed.com</a>
+                        </ul>
+                </div>
+                <!-- END OF TOP BAR--------------->
+
+                <!-- HEADER AREA --------------------->
+                <div id="header_area" class="container">	
+                        <header>
+                           <h1>Sistema de Gestion</h1>
+                        </header>
+                </div>
+                <!-- END OF HEADER AREA  -------------->
+
+                <!-- MENU BAR  --------------------->
+                <div id="menu_bar" class="container">
+
+
+                        <ul >
+                                <a href="#">Bienvenido, Usuario</a>
+                        </ul>
+
+                </div>
+                <!-- END OF MENU BAR  ------------- -->
+
+                <!-- MAIN AREA ------------------- -->
+                <div class="container">
+
+
+                        <!-- SIDENAV MENU ------ -->
+                        <nav id="sidenav">
+
+
+                                <ul>
+                                        <li><a href="#">Login</a></li>
+                                        <li><a href="#">Acceso</a></li>
+                                </ul>
+                        </nav>
+                        <!-- END OF SIDENAV MENU -->
+
+                        <!-- -------------1. CONTENT SECTION -->
+                        <article>
+
+                                <!-- <div class="container"> -->
+
+                                <div class="panel panel-default">
+                                        <div class="panel-body" id="content_panel">
+                                  <ul class="nav nav-tabs">
+                                        <li class="active"><a data-toggle="tab" href="#home">Ingreso</a></li>
+                                        <li><a data-toggle="tab" href="#menu2">Ayuda</a></li>
+                                  </ul>
+
+
+
+                                  <div class="tab-content">
+                                      
+                                        <!-- Login tab -->
+                                        <div id="home" class="tab-pane fade in active">
+
+                                            <h3>Ingresar</h3>
+
+                                            <form>
+
+                                                <table border="0px">
+
+                                                        <tr>
+                                                                        <th>Usuario</th>
+                                                                        <td><input id="UserID_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="UserID_Input_Model" size="30" maxlength="20"></td>
+                                                        
+                                                        </tr>
+                                                        
+                                                        <tr>
+                                                                        <th>Clave</th>
+                                                                        <td><input id="Password_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="Password_Input_Model" size="30" maxlength="20"></td>
+                                                                            
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td></td>
+                                                            <td><br><button ng-click="Login()">Ingresar</button></td>
+                                                            
+                                                        </tr>    
+
+                                                        
+                                                        
+                                                </table>
+                                                
+                                                
+                                            </form>                                          
+                                                
+                                            <td><br><button ng-click="dg()">PrintData</button></td>
+
+                                        </div><!-- End of Login tab -->			
+
+
+                                        <div id="menu2" class="tab-pane fade">
+                                          <h3>Solicitar acceso</h3>
+
+                                            <form>
+
+                                                <table border="0px">
+
+                                                        <tr>
+                                                                        <th>Cedula</th>
+                                                                        <td><input id="UserID_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="UserID_Input_Model" size="30" maxlength="20"></td>
+                                                        </tr>
+                                                        <tr>
+                                                                        <th>Nombre</th>
+                                                                        <td><input id="Names_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="Name_Input_Model" size="30" maxlength="30"></td>
+                                                        </tr>
+                                                        <tr>
+                                                                        <th>Email</th>
+                                                                        <td><input id="Email_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="Email_Input_Model" size="30" maxlength="30"></td>
+                                                        </tr>
+                                                        <tr>
+                                                                        <th>Telefono</th>
+                                                                        <td><input id="Phone_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="Phone_Input_Model" size="30" maxlength="12"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td><br><button ng-click="AccessRequest()">Enviar</button></td>
+                                                        </tr>    
+
+                                                </table>
+                                                
+                                                
+                                            </form>  
+
+
+                                        </div>
+
+                                  </div> <!-- end of tab content -->
+
+
+
+
+                                </div>
+
+                                </div>
+                                <!-- </div> -->
+
+                        </article>
+                        <!-- -------------END OF CONTENT SECTION -->
+
+
+
+
+
+                </div>
+                <!-- END OF MAIN AREA --------------------->
+
+                        <div id="footer_bar" class="container">	
+                                <footer>2016 - Athelog Data Services</footer>
+                        </div>
+
+
+            </div><!--END OF PATIENT CONTROLLER-->
+            
+            </body>
+
+	</html>
+

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<Config>
+    
+    <InstallationInfo>
+        <SystemName>Alfa</SystemName>
+        <Version>1.0</Version>
+        <Owner>Bicoyed</Owner>
+        <Developer>Athelog.net</Developer>
+    </InstallationInfo>
+    
+    <Language>
+        <Select>Spanish</Select>
+        <Encoding>NONE</Encoding>
+    </Language>
+    
+    <FileHandling>
+        <UserFiles>
+            <Root>userfiles</Root>
+            <MaxSizePerUser>NONE</MaxSizePerUser>
+            <MaxSize>NONE</MaxSize>
+        </UserFiles>
+    </FileHandling>
+    
+    <Notifications>
+        <Mail>
+            
+            <TechnicianAccount>
+                <account Number="1">info@athelog.net</account>
+				<account Number="2">rvargas@athelog.net</account>
+            </TechnicianAccount>
+            <DeveloperAccount>
+                <account Number="1">rvargas@athelog.net</account>
+				<account Number="2">info@athelog.net</account>
+            </DeveloperAccount>           
+            <OwnerAccount>
+                <account Number="1">ramirovq@gmail.com</account>
+				<account Number="2">rvq25@hotmail.com</account> 				
+            </OwnerAccount>  
+            
+                        
+                                                
+            <Message Type="UserProfileCreated">
+                <Subject>Bicoyed: Bienvenido al programa de salud</Subject>
+                <Dear>Estimado(a)</Dear>
+                <Body Section="Info">Bicoyed le saluda y le da la bienvenida al programa de salud. Sus datos de acceso al programa son los siguientes:</Body>
+                <Body Section="UserID">Cedula:</Body>
+                <Body Section="Name">Nombre:</Body>
+                <Body Section="Username">Usuario:</Body>
+                <Body Section="Password">Clave:</Body>
+                <Body Section="Warning">Le rogamos dar la debida protección a sus datos. Por favor no comparta su usuario ni clave, y haga click en el botón de Salida para finalizar cada sesión.</Body>
+                <Body Section="Farewell">Gracias. Atentamente,\nel equipo Bicoyed.</Body>
+                <Body Section="Modifier">Datos del creador:</Body>
+                <Footer>Nota: Este correo es generado automáticamente, así que no es posible responder a él. En caso de tener preguntas, le invitamos a enviarlas a:</Footer>
+                <Logo>NONE</Logo>
+                
+                <Receivers>
+                    <Technician>NO</Technician>
+                    <Developer>BC</Developer>
+                    <Owner>BC</Owner>
+                    <User>NONE</User>
+                </Receivers>
+                                                
+            </Message>
+            
+            <Message Type="UserProfileDataChanged">
+                <Subject>Bicoyed: Su perfil ha sido modificado</Subject>
+                <Body Section="Info">Sus datos de perfil de usuario han sido modificados. Para ver los cambios por favor ingrese al portal web.</Body>
+                <Body Section="Farewell">Gracias. Atentamente,\nel equipo Bicoyed.</Body>
+                <Body Section="Modifier">Datos del modificador:</Body>
+                <Footer>Nota: Este correo es generado automáticamente, así que no es posible responder a él. En caso de tener preguntas, le invitamos a enviarlas a:</Footer>
+                <Logo>NONE</Logo>
+                
+                <Receivers>
+                    <Technician>CC</Technician>
+                    <Developer>BC</Developer>
+                    <Owner>BC</Owner>
+                    <User>TO</User>
+                </Receivers>
+                                
+            </Message>  
+                     
+            <Message Type="UserAccessDataChanged">
+                <Subject>Bicoyed: Sus datos de acceso al programa</Subject>
+                <Body Section="Info">Sus datos de acceso al programa son los siguientes:</Body>
+                <Body Section="Username">Usuario:</Body>
+                <Body Section="Password">Clave:</Body>
+                <Body Section="Warning">Le rogamos dar la debida protección a sus datos. Por favor no comparta su usuario ni clave, y haga click en el botón de Salida para finalizar cada sesión.</Body>
+                <Body Section="Farewell" >Gracias. Atentamente,\nel equipo Bicoyed.</Body>
+                <Body Section="Modifier">Datos del solicitante:</Body>
+                <Footer>Nota: Este correo es generado automáticamente, así que no es posible responder a él. En caso de tener preguntas, le invitamos a enviarlas a:</Footer>
+                <Logo>NONE</Logo>
+                
+                <Receivers>
+                    <Technician>CC</Technician>
+                    <Developer>BC</Developer>
+                    <Owner>BC</Owner>
+                    <User>TO</User>
+                </Receivers>
+                
+            </Message>            
+            
+            <Message Type="UserProfileFlaggedForDeletion">
+                <Subject>Bicoyed: Usuario marcado para borrar </Subject>
+                <Body Section="Info">El siguiente usuario ha sido marcado para borrar y requiere confirmacion:</Body>
+                <Body Section="Username">Cedula:</Body>
+                <Body Section="Name">Nombre:</Body>
+                <Body Section="Warning">Para confirmar la eliminacion por favor ingresa al portal web.</Body>
+                <Body Section="Farewell">Gracias. Atentamente,\nel equipo Bicoyed.</Body>
+                <Body Section="Modifier">Datos del modificador:</Body>
+                <Footer>Nota: Este correo es generado automáticamente, así que no es posible responder a él. En caso de tener preguntas, le invitamos a enviarlas a:</Footer>
+                <Logo>NONE</Logo>
+                
+                <Receivers>
+                    <Technician>CC</Technician>
+                    <Developer>BC</Developer>
+                    <Owner>BC</Owner>
+                    <User>NONE</User>
+                </Receivers>
+                
+            </Message>             
+
+            <Message Type="UserProfileDeleted">
+                <Subject>Bicoyed: Usuario ha sido borrado </Subject>
+                <Body Section="Info">El siguiente usuario ha sido borrado del sistema:</Body>
+                <Body Section="UserID">Cedula</Body>
+                <Body Section="Name">Nombre</Body>
+                <Body Section="Name">Nombre:</Body>
+                <Body Section="Farewell" >Gracias. Atentamente,\nel equipo Bicoyed.</Body>
+                <Body Section="Modifier">Datos del confirmador:</Body>
+                <Footer>Nota: Este correo es generado automáticamente, así que no es posible responder a él. En caso de tener preguntas, le invitamos a enviarlas a:</Footer>
+                <Logo>NONE</Logo>
+                
+                <Receivers>
+                    <Technician>CC</Technician>
+                    <Developer>BC</Developer>
+                    <Owner>BC</Owner>
+                    <User>TO</User>
+                </Receivers>
+                
+            </Message>    
+            
+            <Message Type="PatientProfileCreated">
+                <Subject>Bicoyed: Perfil de Paciente Creado</Subject>
+                <Body Section="Info">El siguiente paciente ha sido creado en el sistema:</Body>
+                <Body Section="UserID">Cedula:</Body>
+                <Body Section="Name">Nombre:</Body>
+                <Body Section="Farewell">Gracias. Atentamente,\nel equipo Bicoyed.</Body>
+                <Body Section="Modifier">Datos del creador:</Body>
+                <Footer>Nota: Este correo es generado automáticamente, así que no es posible responder a él. En caso de tener preguntas, le invitamos a enviarlas a:</Footer>
+                <Logo>NONE</Logo>
+                
+                <Receivers>
+                    <Technician>CC</Technician>
+                    <Developer>BC</Developer>
+                    <Owner>BC</Owner>
+                </Receivers>
+                                                
+            </Message>
+            
+            <Message Type="PatientProfileDataChanged">
+                <Subject>Bicoyed: Se ha modificado los datos del perfil del paciente</Subject>
+                <Body Section="Info">Los datos del siguiente paciente han sido modificados:</Body>
+                <Body Section="UserID">Cedula:</Body>
+                <Body Section="Name">Nombre:</Body>
+                <Body Section="Farewell" >Gracias. Atentamente,\nel equipo Bicoyed.</Body>
+                <Body Section="Modifier">Datos del modificador:</Body>
+                <Footer>Nota: Este correo es generado automáticamente, así que no es posible responder a él. En caso de tener preguntas, le invitamos a enviarlas a:</Footer>
+                <Logo>NONE</Logo>
+                
+                <Receivers>
+                    <Technician>CC</Technician>
+                    <Developer>BC</Developer>
+                    <Owner>BC</Owner>
+                </Receivers>
+                                
+            </Message>  
+                     
+      
+            
+            <Message Type="PatientProfileFlaggedForDeletion">
+                <Subject>Bicoyed: Perfil de paciente marcado para borrar </Subject>
+                <Body Section="Info">El siguiente paciente ha sido marcado para borrar y requiere confirmacion:</Body>
+                <Body Section="PatientID">Cedula:</Body>
+                <Body Section="Name">Nombre:</Body>
+                <Body Section="Warning">Para confirmar la eliminacion por favor ingrese al portal web.</Body>
+                <Body Section="Farewell" >Gracias. Atentamente,\nel equipo Bicoyed.</Body>
+                <Body Section="Modifier">Datos del solicitante:</Body>
+                <Footer>Nota: Este correo es generado automáticamente, así que no es posible responder a él. En caso de tener preguntas, le invitamos a enviarlas a:</Footer>
+                <Logo>NONE</Logo>
+                
+                <Receivers>
+                    <Technician>CC</Technician>
+                    <Developer>BC</Developer>
+                    <Owner>BC</Owner>
+                </Receivers>
+                
+            </Message>   
+                                  
+            <Message Type="PatientProfileDeleted">
+                <Subject>Bicoyed: Perfil de paciente ha sido borrado</Subject>
+                <Body Section="Info">El siguiente paciente ha sido borrado del sistema:</Body>
+                <Body Section="PatientID">Cedula:</Body>
+                <Body Section="Name">Nombre:</Body>
+                <Body Section="Farewell" >Gracias. Atentamente,\nel equipo Bicoyed.</Body>
+                <Body Section="Modifier">Datos del confirmador</Body>
+                <Footer>Nota: Este correo es generado automáticamente, así que no es posible responder a él. En caso de tener preguntas, le invitamos a enviarlas a:</Footer>
+                <Logo>NONE</Logo>
+                
+                <Receivers>
+                    <Technician>CC</Technician>
+                    <Developer>BC</Developer>
+                    <Owner>BC</Owner>
+                    <User>TO</User>
+                </Receivers>
+                
+            </Message>   
+
+            <Message Type="CompanyProfileCreated">
+                <Subject>Bicoyed: Perfil de Empresa Creado</Subject>
+                <Body Section="Info">La siguiente empresa ha sido creada en el sistema:</Body>
+                <Body Section="CompanyID">Nombre:</Body>
+                <Body Section="Farewell">Gracias. Atentamente,\nel equipo Bicoyed.</Body>
+                <Body Section="Modifier">Datos del creador:</Body>
+                <Footer>Nota: Este correo es generado automáticamente, así que no es posible responder a él. En caso de tener preguntas, le invitamos a enviarlas a:</Footer>
+                <Logo>NONE</Logo>
+                
+                <Receivers>
+                    <Technician>CC</Technician>
+                    <Developer>BC</Developer>
+                    <Owner>BC</Owner>
+                </Receivers>
+                                                
+            </Message>
+            
+            <Message Type="CompanyProfileDataChanged">
+                <Subject>Bicoyed: Se ha modificado los datos del perfil de empresa</Subject>
+                <Body Section="Info">Los datos de la siguiente empresa han sido modificados:</Body>
+                <Body Section="CompanyID">Nombre:</Body>
+                <Body Section="Farewell" >Gracias. Atentamente,\nel equipo Bicoyed.</Body>
+                <Body Section="Modifier">Datos del modificador:</Body>
+                <Footer>Nota: Este correo es generado automáticamente, así que no es posible responder a él. En caso de tener preguntas, le invitamos a enviarlas a:</Footer>
+                <Logo>NONE</Logo>
+                
+                <Receivers>
+                    <Technician>CC</Technician>
+                    <Developer>BC</Developer>
+                    <Owner>BC</Owner>
+                </Receivers>
+                                
+            </Message>  
+                     
+      
+            
+            <Message Type="CompanyProfileFlaggedForDeletion">
+                <Subject>Bicoyed: Perfil de empresa marcado para borrar </Subject>
+                <Body Section="Info">La siguiente empresa ha sido marcado para borrar y requiere confirmacion:</Body>
+                <Body Section="CompanyID">Nombre:</Body>
+                <Body Section="Warning">Para confirmar la eliminacion por favor ingrese al portal web.</Body>
+                <Body Section="Farewell" >Gracias. Atentamente,\nel equipo Bicoyed.</Body>
+                <Body Section="Modifier">Datos del solicitante:</Body>
+                <Footer>Nota: Este correo es generado automáticamente, así que no es posible responder a él. En caso de tener preguntas, le invitamos a enviarlas a:</Footer>
+                <Logo>NONE</Logo>
+                
+                <Receivers>
+                    <Technician>CC</Technician>
+                    <Developer>BC</Developer>
+                    <Owner>BC</Owner>
+                </Receivers>
+                
+            </Message>   
+                                  
+            <Message Type="CompanyProfileDeleted">
+                <Subject>Bicoyed: Perfil de empresa ha sido borrado</Subject>
+                <Body Section="Info">La siguiente empresa ha sido borrada del sistema:</Body>
+                <Body Section="CompanyID">Nombre</Body>
+                <Body Section="Farewell" >Gracias. Atentamente,\nel equipo Bicoyed.</Body>
+                <Body Section="Modifier">Datos del confirmador</Body>
+                <Footer>Nota: Este correo es generado automáticamente, así que no es posible responder a él. En caso de tener preguntas, le invitamos a enviarlas a:</Footer>
+                <Logo>NONE</Logo>
+                
+                <Receivers>
+                    <Technician>CC</Technician>
+                    <Developer>BC</Developer>
+                    <Owner>BC</Owner>
+                    <User>TO</User>
+                </Receivers>
+                
+            </Message> 
+                                                                                                                                                                        
+        </Mail>
+        
+    </Notifications>
+    
+    
+</Config>

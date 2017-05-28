@@ -1,0 +1,396 @@
+
+	<html ng-app="fetch">
+	<!--<head> -->
+
+		
+		<title>Editar usuario</title> 
+		<meta charset="utf-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js"></script>
+		<script type="text/javascript" src="users_app.js"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+			
+	<!-- </head> -->
+	  
+	  
+	<style>
+	div.container {
+		width: 100%;
+		border: 1px solid gray;
+	}
+
+	<!--
+	footer {
+		padding: 1em;
+		color: white;
+		background-color:  #1e8449  ;
+		clear: left;
+		text-align: center;
+	}
+	-->
+
+	<!--
+	header {
+
+		padding: 1em;
+		color: white;
+		background-color:   #2e86c1 ;
+		clear: left;
+		text-align: center;
+
+	}
+	-->
+
+	nav {
+		float: left;
+		max-width: 160px;
+		margin: 0;
+		padding: 1em;
+	}
+
+	nav ul {
+		list-style-type: none;
+		padding: 0;
+	}
+				
+	nav ul a {
+		text-decoration: none;
+	}
+
+	article {
+		margin-left: 170px;
+		border-left: 1px solid gray;
+		padding: 1em;
+		overflow: hidden;
+	}
+
+	#menu_bar{
+
+		#padding: 1em;
+		color: white;
+		background-color:   #707b7c  ;
+		clear: left;
+		text-align: right;
+		
+	}
+
+	#top_bar{
+
+		/*#padding: 1em;*/
+		color: white;
+		background-color:   #707b7c  ;
+		clear: left;
+		text-align: right;
+		
+	}
+
+	#header_area{
+
+		padding: 1em;
+		color: white;
+		background-color:   #2e86c1 ;
+		clear: left;
+		text-align: center;
+		
+	}
+
+
+	#footer_bar {
+
+		padding: 1em;
+		color: white;
+		background-color:  #1e8449  ;
+		clear: left;
+		text-align: center;
+	}
+
+	#form_div{
+	  
+		width: 200px;
+		align: center;
+		margin: 0 auto;
+	}
+
+	.modal-popup{
+		margin: 20px;
+	}
+	</style>
+
+
+    <!-- controller for patient search -->
+    <div id="UserController" ng-controller="dbCtrl" ng-init="Init('User')">
+
+
+	<body >
+
+
+	<!-- TOP BAR --------------------->
+	<div id="top_bar" class="container">
+
+		div id=top_bar
+
+		<ul>
+			<a href="#">BICOYED Costa Rica</a>
+			<a href="#">Contacto +506 2253 5555, agomez@bicoyed.com</a>
+		</ul>
+	</div>
+	<!-- END OF TOP BAR--------------->
+
+	<!-- HEADER AREA --------------------->
+	<div id="header_area" class="container">	
+		<header>
+		   <h1>Sistema de Gestion</h1>
+		</header>
+	</div>
+	<!-- END OF HEADER AREA  -------------->
+
+	<!-- MENU BAR  --------------------->
+	<div id="menu_bar" class="container">
+		
+		<ul >
+			<a href="#">Bienvenido, UserID_Tag</a><button ng-click="Logout()">Salir</button>
+		</ul>
+
+	</div>
+	<!-- END OF MENU BAR  ------------- -->
+
+	<!-- MAIN AREA ------------------- -->
+	<div class="container">
+
+		
+		<!-- SIDENAV MENU ------ -->
+		<nav id="sidenav">
+					
+			<ul>
+                                <li><a href="../index/index.php">Indice</a></li>
+				<li><a href="#">Ayuda</a></li>
+				<li><a href="#">Acerca de</a></li>
+				
+			</ul>
+		</nav>
+		<!-- END OF SIDENAV MENU -->
+
+		<!-- -------------1. CONTENT SECTION -->
+		<article>
+			
+			<!-- <div class="container"> -->
+
+			<div class="panel panel-default">
+				<div class="panel-body" id="content_panel">
+			  <ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="tab" href="#home">Usuario</a></li>
+                                <li><a data-toggle="tab" href="#menu1">Opciones</a></li>
+				<li><a data-toggle="tab" href="#menu2">Ayuda</a></li>
+			  </ul>
+
+
+
+			  <div class="tab-content">
+				<div id="home" class="tab-pane fade in active">
+				  <h3>Editar usuario</h3>
+			  
+
+			  
+						<!--------- Search results ------->
+						<div>
+						<form name="PatientForm">
+					
+							<table border="1px">
+							<!--FIXME:delete all ng-repeat and correct "valor actual"-->	
+
+								<tr>
+									<th>Dato</th>
+									<th>Valor Actual</th>
+									<th>Valor Nuevo</th>
+									<!--<th>Validacion</th>	-->
+								</tr>
+								<tr>
+									<th>Cedula</th>
+									<td ng-repeat="users in data">{{users.UserID}}</td>
+									<td><input name="UserID_Field" type="number"  runat="server" ng-init="inputVal='{{users.UserID}}'" ng-model="UserID_Input_Model"  readonly></td>	
+									<!--<td>validation={{PatientForm.PatientID_Field.$valid}}</td>-->
+								</tr>
+								<tr>
+									<th>Nombre</th>
+									<td ng-repeat="users in data">{{users.Forename}}</td>
+									<td><input name="Forename_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="Forename_Input_Model" required></td>
+									
+									<!--<td>validation={{PatientForm.Forename_Field.$valid}}</td>-->
+								</tr>
+								<tr>
+									<th>Segundo Nombre</th>
+									<td ng-repeat="users in data">{{users.MiddleName}}</td>
+									<td><input name="FirstSurname_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="MiddleName_Input_Model" required></td>
+									
+									<!--<td>validation={{PatientForm.FirstSurname_Field.$valid}}</td>-->
+								</tr>									
+								<tr>
+									<th>Primer Apellido</th>
+									<td ng-repeat="users in data">{{users.FirstSurname}}</td>
+									<td><input name="FirstSurname_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="FirstSurname_Input_Model" required></td>
+									
+									<!--<td>validation={{PatientForm.FirstSurname_Field.$valid}}</td>-->
+								</tr>
+								<tr>
+									<th>Segundo Apellido</th>
+									<td ng-repeat="users in data">{{users.SecondSurname}}</td>
+									<td><input name="SecondSurname_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="SecondSurname_Input_Model" required></td>
+									
+									<!--<td>validation={{PatientForm.SecondSurname_Field.$valid}}</td>-->
+								</tr>
+								<tr>
+									<th>Email</th>
+									<td ng-repeat="users in data">{{users.Email}}</td>
+									<td><input name="UserEmail_Field" type="email"  runat="server" ng-init="inputVal=''" ng-model="UserEmail_Input_Model" required></td>
+									
+									<!--<td>validation={{PatientForm.PatientEmail_Field.$valid}}</td>-->
+								</tr>
+								<tr>
+									<th>Telefono</th>
+									<td ng-repeat="users in data">{{users.Phone}}</td>
+									<td><input name="UserPhone_Field" type="number"  runat="server" ng-init="inputVal=''" ng-model="UserPhone_Input_Model" required></td>
+									<!--<td>validation={{PatientForm.PatientPhone_Field.$valid}}</td>-->
+								</tr>
+								<tr>
+									<th>Fecha entrada al programa</th>
+									<td>FIXME:add date</td>
+								</tr>
+								<tr>
+									<th>Empresa</th>
+									<td ng-repeat="users in data">{{users.CompanyID}}</td>
+									<td><select ng-model="CompanyID_Input_Model" ng-options="item as item.CompanyID for item in CompanyList"></select></td>
+									<!--<td>validation={{PatientForm.CompanyIDSelect.$valid}}</td>-->								
+								</tr>
+								</tr>
+								<tr>
+									<th>Privilegios</th>
+									<td ng-repeat="users in data">{{users.UserGroup}}</td>
+									<td>
+										<select name="UserGroupSelect" class="form-control"  ng-model="UserGroupSelect_Input_Model"  required>
+											<option></option>
+											<option>NONE</option>
+											<option>Guest</option>
+											<option>Viewer</option>
+											<option>Editor</option>										
+											<option>Administrator</option>
+											<option>Developer</option>												
+										</select>
+									</td>	
+									<!--<td>validation={{PatientForm.CompanyIDSelect.$valid}}</td>-->
+								</tr>	
+								<tr>
+									<th>Status</th>
+									<td ng-repeat="users in data">{{users.Status}}</td>
+									<td>
+										<select name="UserGroupSelect" class="form-control"  ng-model="StatusSelect_Input_Model"  required>
+											<option></option>
+											<option>active</option>
+											<option>inactive</option>		
+										</select>
+									</td>	
+									<!--<td>validation={{PatientForm.CompanyIDSelect.$valid}}</td>-->
+								</tr>
+								
+							</table>		
+
+							<!--
+							<button ng-click="CreatePatient()">CreatePatient()</button>
+							<button ng-click="dg()">dg</button>
+							-->
+                                                        
+                                                        <br>
+                                                        <div ng-repeat="users in data">
+                                                            <a href="iug.php?Action=EditUser&ID={{users.UserID}}&RowID={{users.RowID}}">Agregar empresa/permisos</a>
+                                                        </div>
+							
+						</form>		
+						</div><!--------- End of Search results ------->				
+
+						<br>
+						<!-- user edit modal popup -->
+						<script type="text/javascript" src="edit_user_modal.js"></script>
+						<div class="modal-popup" ng-show="true">
+							<!-- Button HTML (to Trigger Modal) -->
+							<input type="button" class="btn btn-lg btn-primary launch-modal" value="Guardar">
+							
+							<!-- Modal HTML -->
+							<div id="myModal" class="modal fade">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+											<h4 class="modal-title">Confirmacion</h4>
+										</div>
+										<div class="modal-body">
+											<p>¿Guardar perfil de usuario con los siguientes datos?</p>
+											<p class="text-warning"><small>Si NO guarda, los cambios se perderan</small></p>
+											<!--<p class="text-info"><small><strong>Note:</strong> Press Tab key on the keyboard to enter inside the modal window after that press the Esc key. By default keyboard option is true that means modal hide on the press of escape key.</small></p>-->
+											<!--<p>{{Modal_Message}}</p>-->
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+											<button type="button" class="btn btn-primary" data-dismiss="modal" id="save-event" >Enviar</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>				
+						<!--end of user popup modal -->
+						
+						
+						
+					
+
+				</div><!-- End of patient tab -->			
+
+				<div id="menu1" class="tab-pane fade">
+				  <h3>Opciones</h3>
+                                  
+                                    <!--button to delete patient -->
+                                    <button ng-click="FFDUser()">Marcar para borrar</button>
+                                    <button ng-click="GeneratePassword()">Generar clave</button>
+				</div>                                    
+     
+				<div id="menu2" class="tab-pane fade">
+				  <h3>Tips generales</h3>
+				  <p>Introduzca cualquier criterio de busqueda en los campos y luego haga click sobre el boton de Busqueda </p>
+				</div>
+
+                            
+                                
+                                
+                                
+			  </div> <!-- end of tab content -->
+			  
+			  
+			  
+			  
+			</div>
+
+			</div>
+			<!-- </div> -->
+			
+		</article>
+		<!-- -------------END OF CONTENT SECTION -->
+
+
+		
+		
+		
+	</div>
+	<!-- END OF MAIN AREA --------------------->
+
+		<div id="footer_bar" class="container">	
+			<footer>2016 - Athelog Data Services</footer>
+		</div>
+
+	</body>
+    </div><!-- ------- End of Search patient controller -->
+	</html>
+

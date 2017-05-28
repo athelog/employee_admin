@@ -1,0 +1,345 @@
+
+	<html ng-app="fetch">
+	<!--<head> -->
+
+		
+		<title>Generar reportes</title> 
+		<meta charset="utf-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js"></script>
+		<script type="text/javascript" src="reports_app.js"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+			
+	<!-- </head> -->
+	  
+	  
+	<style>
+	div.container {
+		width: 100%;
+		border: 1px solid gray;
+	}
+
+	<!--
+	footer {
+		padding: 1em;
+		color: white;
+		background-color:  #1e8449  ;
+		clear: left;
+		text-align: center;
+	}
+	-->
+
+	<!--
+	header {
+
+		padding: 1em;
+		color: white;
+		background-color:   #2e86c1 ;
+		clear: left;
+		text-align: center;
+
+	}
+	-->
+
+	nav {
+		float: left;
+		max-width: 160px;
+		margin: 0;
+		padding: 1em;
+	}
+
+	nav ul {
+		list-style-type: none;
+		padding: 0;
+	}
+				
+	nav ul a {
+		text-decoration: none;
+	}
+
+	article {
+		margin-left: 170px;
+		border-left: 1px solid gray;
+		padding: 1em;
+		overflow: hidden;
+	}
+
+	#menu_bar{
+
+		#padding: 1em;
+		color: white;
+		background-color:   #707b7c  ;
+		clear: left;
+		text-align: right;
+		
+	}
+
+	#top_bar{
+
+		/*#padding: 1em;*/
+		color: white;
+		background-color:   #707b7c  ;
+		clear: left;
+		text-align: right;
+		
+	}
+
+	#header_area{
+
+		padding: 1em;
+		color: white;
+		background-color:   #2e86c1 ;
+		clear: left;
+		text-align: center;
+		
+	}
+
+
+	#footer_bar {
+
+		padding: 1em;
+		color: white;
+		background-color:  #1e8449  ;
+		clear: left;
+		text-align: center;
+	}
+
+	#form_div{
+	  
+		width: 200px;
+		align: center;
+		margin: 0 auto;
+	}
+
+	.modal-popup{
+		margin: 20px;
+	}
+	</style>
+
+
+        <!-- controller for patient search -->
+        <div id="CompanyController" ng-controller="dbCtrl" ng-init="Init('Company')">
+	<body >
+
+
+	<!-- TOP BAR --------------------->
+	<div id="top_bar" class="container">
+
+		<ul>
+			<a href="#">BICOYED Costa Rica</a>
+			<a href="#">Contacto +506 2253 5555, agomez@bicoyed.com</a>
+		</ul>
+	</div>
+	<!-- END OF TOP BAR--------------->
+
+	<!-- HEADER AREA --------------------->
+	<div id="header_area" class="container">	
+		<header>
+		   <h1>Sistema de Gestion</h1>
+		</header>
+	</div>
+	<!-- END OF HEADER AREA  -------------->
+
+	<!-- MENU BAR  --------------------->
+	<div id="menu_bar" class="container">
+		
+	
+		<ul >
+                    <a href="#">Bienvenido, UserID_Tag </a>
+                    <button ng-click="Logout()">Salir</button>
+		</ul>
+
+	</div>
+	<!-- END OF MENU BAR  ------------- -->
+
+	<!-- MAIN AREA ------------------- -->
+	<div class="container">
+
+		
+		<!-- SIDENAV MENU ------ -->
+		<nav id="sidenav">
+		
+			
+			<ul>
+				<li><a href="#">Ayuda</a></li>
+				<li><a href="#">Acerca de</a></li>
+			</ul>
+		</nav>
+		<!-- END OF SIDENAV MENU -->
+
+		<!-- -------------1. CONTENT SECTION -->
+		<article>
+			
+			<!-- <div class="container"> -->
+
+			<div class="panel panel-default">
+				<div class="panel-body" id="content_panel">
+			  <ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="tab" href="#home">Perfil</a></li>
+				<li><a data-toggle="tab" href="#menu1">Reporte</a></li>
+				<li><a data-toggle="tab" href="#menu2">Ayuda</a></li>
+			  </ul>
+
+
+
+			  <div class="tab-content">
+				<div id="home" class="tab-pane fade in active">
+				  <h3>Perfil de empresa</h3>
+			  
+
+			  
+						<!--------- Search results ------->
+						<div>
+						<form name="PatientForm">
+					
+									<table border="1px">										
+
+										<tr>
+											<th>Dato</th>
+											<th>Valor actual</th>
+											<!--<th>Validacion</th>-->	
+										</tr>
+										<tr>
+											<th>ID Empresa</th>
+											<td ng-repeat="company in CompanyData">{{company.CompanyID}}</td>
+											<!--<td>validation={{CompanyForm.CompanyID2_Field.$valid}}</td>-->
+										</tr>
+										<tr>
+											<th>Telefono</th>
+											<td ng-repeat="company in CompanyData">{{company.Phone}}</td>
+											<!--<td>validation={{CompanyForm.CompanyPhone_Field.$valid}}</td>-->
+										</tr>
+										<tr>
+											<th>Email</th>
+											<td ng-repeat="company in CompanyData">{{company.Email}}</td>
+											<!--<td>validation={{CompanyForm.CompanyEmail_Field.$valid}}</td>-->
+										</tr>
+
+										<tr>
+											<th>Direccion</th>
+											<td ng-repeat="company in CompanyData">{{company.Address}}</td>
+											<!--<td>validation={{CompanyForm.CompanyAddress_Field.$valid}}</td>-->
+										</tr>
+										
+									</table>	
+
+							<!--<button ng-click="CreatePatient()">CreatePatient()</button>-->
+							<!--<button ng-click="dg()">dg</button>-->
+							
+						</form>		
+						</div><!--------- End of Search results ------->				
+
+
+				</div><!-- End of patient tab -->			
+				
+				<div id="menu1" class="tab-pane fade">
+					<h3>Generar reporte de empresa</h3>
+					
+					
+							<form name="CompanyForm">
+
+                                                                    <!-- Search Filters -->
+                                                                
+                                                                    <table border="1px">
+                                                                    <!--FIXME:delete all ng-repeat and correct "valor actual"-->	
+
+                                                                            <tr>
+                                                                                    <th>Dato</th>
+                                                                                    <th>Valor actual</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                    <th>Fecha Inicial(dd-mm-aaaa)</th>
+                                                                                    <td><input name="StartDateCompany_Field" type="date"  runat="server" ng-init="inputVal=''" ng-model="StartDateCompany_Input_Model" required></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                    <th>Fecha Final(dd-mm-aaaa)</th>
+                                                                                    <td><input name="EndDateCompany_Field" type="date"  runat="server" ng-init="inputVal=''" ng-model="EndDateCompany_Input_Model" required></td>
+                                                                                    
+                                                                            </tr>                                                                            
+                                                                       
+                                                                            
+                                                                    </table>
+                                                                            
+                                                                    <br><button ng-click="GenerateCompanyReport()">Generar</button> 
+
+                                                                    <!-- Report area -->
+                                                                             <table class="table table-hover">
+                                                                                    <thead>
+                                                                                            <tr>
+                                                                                                    <th>Empresa</th>
+                                                                                                    <th>Cedula</th>
+                                                                                                    <th>Variable</th>
+                                                                                                    <th>Valor</th>
+                                                                                                    <th>Modificador</th>
+                                                                                                    <th>Fecha ult/cambio</th>
+                                                                                            </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                            <tr ng-repeat="Test in ReportData | filter:searchFilter">
+                                                                                                    <td>{{Test.CompanyID}}</td>
+                                                                                                    <td>{{Test.PatientID}}</td>
+                                                                                                    <td>{{Test.Test}}</td>
+                                                                                                    <td>{{Test.Value}}</td>
+                                                                                                    <td>{{Test.ModifierID}}</td>
+                                                                                                    <td>{{Test.ModDate}}</td>
+	
+
+                                                                                            </tr>
+                                                                                    </tbody>
+                                                                            </table>
+                                                                    
+                                                                    <!-- end of report area-->            
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+							</form>
+
+						
+						
+					
+				</div> <!--End of Company Search tab-->
+				
+				
+				<div id="menu2" class="tab-pane fade">
+				  <h3>Tips generales</h3>
+				  <p>Introduzca cualquier criterio de busqueda en los campos y luego haga click sobre el boton de Busqueda </p>
+				</div>
+
+			  </div> <!-- end of tab content -->
+			  
+			  
+			  
+			  
+			</div>
+
+			</div>
+			<!-- </div> -->
+			
+		</article>
+		<!-- -------------END OF CONTENT SECTION -->
+
+
+		
+		
+		
+	</div>
+	<!-- END OF MAIN AREA --------------------->
+
+		<div id="footer_bar" class="container">	
+			<footer>2016 - Athelog Data Services</footer>
+		</div>
+
+	</body>
+        </div><!-- End of controller for Company -->
+        
+	</html>
+

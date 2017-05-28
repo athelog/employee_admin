@@ -1,0 +1,11 @@
+Options -Indexes
+
+<Files ~ "\.html$">
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files ~ "\.js$">
+Order Allow,Deny
+Deny from all
+</Files>

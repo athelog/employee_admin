@@ -1,0 +1,11 @@
+﻿RowID;CompanyID;Phone;Email;Address;Status;LastMod;ModifierID;LastIP;FFD
+0;mucap;80313201;mucap@mucap.com;Nicoya;FALSE;2017-08-05;730300606;132.126.211.1;
+1;cfia;89181224;cfia@cfia.com;Nicoya;TRUE;2016-04-27;119719940;230.169.134.18;
+2;banco nacional;85591856;banco nacional@banco nacional.com;Quepos;FALSE;2017-01-25;131937220;218.237.103.12;
+3;boston scientific;87344128;boston scientific@boston scientific.com;Cartago;TRUE;2016-05-15;131937220;249.113.213.10;
+4;intel;80176725;intel@intel.com;Perez Zeledon;TRUE;2016-09-24;459779329;186.133.146.13;
+5;hpe;81320878;hpe@hpe.com;San Jose;TRUE;2015-09-20;540296096;121.192.215.15;
+6;panasonic;86030351;panasonic@panasonic.com;San Carlos;FALSE;2016-08-18;540296096;122.173.147.19;
+7;bac san jose;85888072;bac san jose@bac san jose.com;Nicoya;TRUE;2017-12-28;270049781;113.123.118.19;
+8;Vmware;85455703;Vmware@Vmware.com;Quepos;TRUE;2016-10-27;119719940;187.116.179.7;
+9;IBM;87127484;IBM@IBM.com;Heredia;TRUE;2017-05-01;540296096;158.171.121.14;
