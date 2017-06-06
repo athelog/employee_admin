@@ -4,59 +4,43 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://localhost/" />
-<title>search_user_as_dev</title>
+<title>login_as_editor</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">search_user_as_dev</td></tr>
+<tr><td rowspan="1" colspan="3">login_as_editor</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>/athelog/code/cpanel/su.php</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=Forename_Field</td>
-	<td>Ramiro</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[@id='home']/form/table/tbody/tr[11]/td[2]/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=Forename_Field</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1500</td>
+	<td>/patientcare/code/index/login.html</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=UserID_Field</td>
-	<td>111610819</td>
+	<td>594929479</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password_Field</td>
+	<td>594929479</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[@id='home']/form/table/tbody/tr[11]/td[2]/button</td>
+	<td>css=button</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>1500</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
-	<td></td>
-	<td></td>
+	<td>clickAndWait</td>
+	<td>css=button</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>

@@ -4,44 +4,48 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://localhost/" />
-<title>login_as_dev</title>
+<title>search_patient_as_dev</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">login_as_dev</td></tr>
+<tr><td rowspan="1" colspan="3">search_patient_as_dev</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>/athelog/code/index/login.html</td>
+	<td>/patientcare/code/profiles/sp.php</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=UserID_Field</td>
-	<td>131937220</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=Password_Field</td>
-	<td>131937220</td>
+	<td>id=Patient_Field</td>
+	<td>111610819</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=button</td>
+	<td>//div[@id='home']/div/form/table/tbody/tr[8]/td[2]/button</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>1500</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>css=button</td>
+	<td>type</td>
+	<td>id=FirstSurname_Field</td>
+	<td>vargas</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='home']/div/form/table/tbody/tr[8]/td[2]/button</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>
