@@ -134,8 +134,8 @@
                 <div id="top_bar" class="container">
 
                         <ul>
-                                <a href="#">BICOYED Costa Rica</a>
-                                <a href="#">Contacto +506 2253 5555, agomez@bicoyed.com</a>
+                                <a href="#">Athelog</a>
+                                <a href="#">Contact +506 8917-3644</a>
                         </ul>
                 </div>
                 <!-- END OF TOP BAR--------------->
@@ -143,7 +143,7 @@
                 <!-- HEADER AREA --------------------->
                 <div id="header_area" class="container">	
                         <header>
-                           <h1>Sistema de Gestion</h1>
+                           <h1>HR System</h1>
                         </header>
                 </div>
                 <!-- END OF HEADER AREA  -------------->
@@ -153,8 +153,8 @@
 
 
                         <ul >
-                            <a href="#">Bienvenido, UserID_Tag </a>
-                            <button ng-click="Logout()">Salir</button>                        
+                            <a href="#">Welcome, UserID_Tag </a>
+                            <button ng-click="Logout()">Logout</button>                        
                         </ul>
 
                 </div>
@@ -170,7 +170,7 @@
 
                                 <ul>
                                         <li><a href="#">Menu</a></li>
-                                        <li><a href="#">Acceso</a></li>
+                                        <li><a href="#">Access</a></li>
                                 </ul>
                         </nav>
                         <!-- END OF SIDENAV MENU -->
@@ -184,8 +184,8 @@
                                         <div class="panel-body" id="content_panel">
                                   <ul class="nav nav-tabs">
                                         <li class="active"><a data-toggle="tab" href="#main">Menu</a></li>
-                                        <li><a data-toggle="tab" href="#user">Usuario</a></li>
-                                        <li><a data-toggle="tab" href="#patient">Expediente</a></li>
+                                        <li><a data-toggle="tab" href="#user">User</a></li>
+                                        <li><a data-toggle="tab" href="#patient">File</a></li>
                                   </ul>
 
 
@@ -195,35 +195,58 @@
                                         <!-- Login tab -->
                                         <div id="main" class="tab-pane fade in active">
 
-                                            <h3>Acciones</h3>
+                                            <!--<h3>Acciones</h3>-->
+                                            <h3>Actions</h3>
 
                                             <form>
 
                                                 <table border="0px">
 
                                                         <tr>
-                                                                        <th>Usuarios</th>
+                                                                        <!--<th>Users</th>--><th>Users</th>
                                                                         <td>
-                                                                            <a href="../cpanel/su.php">Buscar</a>
-                                                                            <a href="../cpanel/cu.php">Crear</a>
-                                                                            <a href="../cpanel/ffdu.php?Action=ListFFDUser&ID=-10">Marcados para borrar</a>
-                                                                        </td>
-                                                        </tr>
-                                                        <tr>
-                                                                        <th>Pacientes</th>
-                                                                        <td>
-                                                                            <a href="../profiles/sp.php">Buscar</a>
-                                                                            <a href="../profiles/cp.php">Crear</a>
+                                                                            <!--
+                                                                            <a href="../cpanel/su.php">Search</a>
+                                                                            <a href="../cpanel/cu.php">Create</a>
+                                                                            <a href="../cpanel/ffdu.php?Action=ListFFDUser&ID=-10">Flagged for deletion</a>
+                                                                            -->
+                                                                            
+                                                                            <a href="../cpanel/su.php">Search</a>
+                                                                            <a href="../cpanel/cu.php">Create</a>
+                                                                            <a href="../cpanel/ffdu.php?Action=ListFFDUser&ID=-10">Flagged for deletion</a>
+
                                                                             
                                                                         </td>
                                                         </tr>
                                                         <tr>
-                                                                        <th>Empresas</th>
+                                                                        <!--<th>Employees</th>-->
+                                                                        <th>Employees</th>
                                                                         <td>
-                                                                            <a href="../profiles/sp.php">Buscar</a>
-                                                                            <a href="../profiles/cp.php">Crear</a>
-                                                                            <a href="../profiles/ed.php">Departamentos</a>
-                                                                            <a href="../profiles/ffd.php">Marcados para borrar</a>
+                                                                            <!--
+                                                                            <a href="../profiles/sp.php">Search</a>
+                                                                            <a href="../profiles/cp.php">Create</a>
+                                                                            -->
+                                                                            <a href="../profiles/sp.php">Search</a>
+                                                                            <a href="../profiles/cp.php">Create</a>
+                                                                            
+                                                                        </td>
+                                                        </tr>
+                                                        <tr>
+                                                                        <!--<th>Companies</th>-->
+                                                                        <th>Companies</th>
+                                                                        
+                                                                        <td>
+                                                                            
+                                                                            <!--
+                                                                            <a href="../profiles/sp.php">Search</a>
+                                                                            <a href="../profiles/cp.php">Create</a>
+                                                                            <a href="../profiles/ed.php">Departaments</a>
+                                                                            <a href="../profiles/ffd.php">Flagged for deletion</a>
+                                                                            -->
+                                                                            <a href="../profiles/sp.php">Search</a>
+                                                                            <a href="../profiles/cp.php">Create</a>
+                                                                            <a href="../profiles/ed.php">Departaments</a>
+                                                                            <a href="../profiles/ffd.php">Flagged for deletion</a>                                                                            
                                                                         </td>
                                                         </tr>
                                                         
@@ -237,37 +260,38 @@
 
 
                                         <div id="user" class="tab-pane fade">
-                                          <h3>Mi perfil de usuario</h3>
+                                          <!--<h3>Mi perfil de usuario</h3>-->
+                                          <h3>My user profile</h3>
 
                                                 <table border="1px">
 
 
                                                         <tr>
-                                                                <th>Dato</th>
-                                                                <th>Valor actual</th>
-                                                                <th>Valor nuevo</th>
+                                                                <th>Data</th>
+                                                                <th>Current value</th>
+                                                                <th>New value</th>
                                                                 <!--<th>Validación</th>	-->	
                                                         </tr>
                                                         <tr>
-                                                                <th>Cedula</th>
+                                                                <th>ID Number</th>
                                                                 <td ng-repeat="patients in data">{{patients.PatientID}}</td>
                                                                 <td><input name="PatientID_Field" type="number"  runat="server" ng-init="inputVal=''" ng-model="PatientID_Input_Model" required readonly></td>	
                                                                 <!--<td>validation={{PatientForm.PatientID_Field.$valid}}</td>-->
                                                         </tr>
                                                         <tr>
-                                                                <th>Nombre</th>
+                                                                <th>Forename</th>
                                                                 <td ng-repeat="patients in data">{{patients.Forename}}</td>
                                                                 <td><input name="Forename_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="Forename_Input_Model" required></td>
                                                                 <!--<td>validation={{PatientForm.Forename_Field.$valid}}</td>-->
                                                         </tr>
                                                         <tr>
-                                                                <th>Primer Apellido</th>
+                                                                <th>First Surname</th>
                                                                 <td ng-repeat="patients in data">{{patients.FirstSurname}}</td>
                                                                 <td><input name="FirstSurname_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="FirstSurname_Input_Model" required></td>
                                                                 <!--<td>validation={{PatientForm.FirstSurname_Field.$valid}}</td>-->
                                                         </tr>
                                                         <tr>
-                                                                <th>Segundo Apellido</th>
+                                                                <th>Second Surname</th>
                                                                 <td ng-repeat="patients in data">{{patients.SecondSurname}}</td>
                                                                 <td><input name="SecondSurname_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="SecondSurname_Input_Model" required></td>
                                                                 <!--<td>validation={{PatientForm.SecondSurname_Field.$valid}}</td>-->
@@ -279,23 +303,23 @@
                                                                 <!--<td>validation={{PatientForm.PatientEmail_Field.$valid}}</td>-->
                                                         </tr>
                                                         <tr>
-                                                                <th>Telefono</th>
+                                                                <th>Phone</th>
                                                                 <td ng-repeat="patients in data">{{patients.Phone}}</td>
                                                                 <td><input name="PatientPhone_Field" type="number"  runat="server" ng-init="inputVal=''" ng-model="PatientPhone_Input_Model" required></td>
                                                                 <!--<td>validation={{PatientForm.PatientPhone_Field.$valid}}</td>-->
                                                         </tr>
                                                         <tr>
-                                                                <th>Fecha Nacimiento(dd-mm-aaaa)</th>
+                                                                <th>Date of birth(dd-mm-yyyy)</th>
                                                                 <td ng-repeat="patients in data">{{patients.BirthDate}}</td>
                                                                 <td><input name="BirthDate_Field" type="date"  runat="server" ng-init="inputVal=''" ng-model="BirthDate_Input_Model" required></td>
                                                                 <!--<td>validation={{PatientForm.BirthDate_Field.$valid}}</td>-->
                                                         </tr>
                                                         <tr>
-                                                                <th>Fecha entrada al programa</th>
+                                                                <th>Date of start</th>
                                                                 <td ng-repeat="patients in data">{{patients.JoinDate}}</td>
                                                         </tr>
                                                         <tr>
-                                                                <th>Genero</th>
+                                                                <th>Gender</th>
                                                                 <td ng-repeat="patients in data">{{patients.Gender}}</td>
                                                                 <td>
                                                                         <select name="GenderSelect" class="form-control"  ng-model="GenderSelect_Input_Model" required>
@@ -308,13 +332,13 @@
 
                                                         </tr>
                                                         <tr>
-                                                                <th>Direccion</th>
+                                                                <th>Address</th>
                                                                 <td ng-repeat="patients in data">{{patients.Address}}</td>
                                                                 <td><input name="PatientAddress_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="PatientAddress_Input_Model" required></td>
                                                                 <!--<td>validation={{PatientForm.PatientAddress_Field.$valid}}</td>-->
                                                         </tr>
                                                         <tr>
-                                                                <th>ID Empresa</th>
+                                                                <th>Company ID</th>
                                                                 <td ng-repeat="patients in data">{{patients.CompanyID}}</td>
                                                                 <td>
                                                                         <select name="CompanyIDSelect" class="form-control"  ng-model="CompanySelect_Input_Model"  required>
@@ -325,7 +349,7 @@
                                                                 </td>	
                                                                 <!--<td>validation={{PatientForm.CompanyIDSelect.$valid}}</td>-->	</tr>
                                                         <tr>
-                                                                <th>Departamento</th>
+                                                                <th>Department</th>
                                                                 <td ng-repeat="patients in data">{{patients.Department}}</td>
                                                                 <td>
                                                                         <select name="DepartmentSelect" class="form-control"  ng-model="DepartmentSelect_Input_Model" required>
@@ -337,7 +361,7 @@
                                                                 <!--<td>validation={{PatientForm.DepartmentSelect.$valid}}</td>-->		
                                                         </tr>
                                                         <tr>
-                                                                <th>Sede</th>
+                                                                <th>Site</th>
                                                                 <td ng-repeat="patients in data">{{patients.Site}}</td>
                                                                 <td>
                                                                         <select name="SiteSelect" class="form-control"  ng-model="SiteSelect_Input_Model" required>
@@ -355,7 +379,7 @@
                                         </div><!-- end of user profile -->
                                         
                                         <div id="patient" class="tab-pane fade">
-                                            <h3>Mi expediente</h3>
+                                            <h3>My file</h3>
                                             
                                         </div><!-- end of patient tab -->
 
@@ -380,7 +404,7 @@
                 <!-- END OF MAIN AREA --------------------->
 
                         <div id="footer_bar" class="container">	
-                                <footer>2016 - Athelog Data Services</footer>
+                                <footer>2017 - Athelog Data Services</footer>
                         </div>
 
 

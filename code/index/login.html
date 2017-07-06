@@ -135,8 +135,8 @@
                 <div id="top_bar" class="container">
 
                         <ul>
-                                <a href="#">BICOYED Costa Rica</a>
-                                <a href="#">Contacto +506 2253 5555, agomez@bicoyed.com</a>
+                                <a href="#">Athelog</a>
+                                <a href="#">Contact +506 8917-3644</a>
                         </ul>
                 </div>
                 <!-- END OF TOP BAR--------------->
@@ -144,7 +144,7 @@
                 <!-- HEADER AREA --------------------->
                 <div id="header_area" class="container">	
                         <header>
-                           <h1>Sistema de Gestion</h1>
+                           <h1>HR System</h1>
                         </header>
                 </div>
                 <!-- END OF HEADER AREA  -------------->
@@ -154,7 +154,7 @@
 
 
                         <ul >
-                                <a href="#">Bienvenido, Usuario</a>
+                                <a href="#">Welcome, User</a>
                         </ul>
 
                 </div>
@@ -170,7 +170,7 @@
 
                                 <ul>
                                         <li><a href="#">Login</a></li>
-                                        <li><a href="#">Acceso</a></li>
+                                        <li><a href="#">Access</a></li>
                                 </ul>
                         </nav>
                         <!-- END OF SIDENAV MENU -->
@@ -183,8 +183,8 @@
                                 <div class="panel panel-default">
                                         <div class="panel-body" id="content_panel">
                                   <ul class="nav nav-tabs">
-                                        <li class="active"><a data-toggle="tab" href="#home">Ingreso</a></li>
-                                        <li><a data-toggle="tab" href="#menu2">Ayuda</a></li>
+                                        <li class="active"><a data-toggle="tab" href="#home">Access</a></li>
+                                        <li><a data-toggle="tab" href="#menu2">Help</a></li>
                                   </ul>
 
 
@@ -194,27 +194,31 @@
                                         <!-- Login tab -->
                                         <div id="home" class="tab-pane fade in active">
 
-                                            <h3>Ingresar</h3>
+                                            <!--<h3>Ingresar</h3>-->
+                                            <h3>Enter</h3>
 
                                             <form>
 
                                                 <table border="0px">
 
                                                         <tr>
-                                                                        <th>Usuario</th>
+                                                                        <!--<th>Usuario</th>-->                                                                       
+                                                                        <th>User</th>
                                                                         <td><input id="UserID_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="UserID_Input_Model" size="30" maxlength="20"></td>
                                                         
                                                         </tr>
                                                         
                                                         <tr>
-                                                                        <th>Clave</th>
+                                                                        <!--<th>Clave</th>-->
+                                                                        <th>Pass</th>
                                                                         <td><input id="Password_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="Password_Input_Model" size="30" maxlength="20"></td>
                                                                             
                                                         </tr>
 
                                                         <tr>
                                                             <td></td>
-                                                            <td><br><button ng-click="Login()">Ingresar</button></td>
+                                                            <!--<td><br><button ng-click="Login()">Ingresar</button></td>-->
+                                                            <td><br><button ng-click="Login()">Login</button></td>
                                                             
                                                         </tr>    
 
@@ -231,18 +235,19 @@
 
 
                                         <div id="menu2" class="tab-pane fade">
-                                          <h3>Solicitar acceso</h3>
+                                          <!--<h3>Solicitar acceso</h3>-->
+                                          <h3>Request access</h3>
 
                                             <form>
 
                                                 <table border="0px">
 
                                                         <tr>
-                                                                        <th>Cedula</th>
+                                                                        <!--<th>ID Number</th>--><th>ID Number</th>
                                                                         <td><input id="UserID_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="UserID_Input_Model" size="30" maxlength="20"></td>
                                                         </tr>
                                                         <tr>
-                                                                        <th>Nombre</th>
+                                                                        <!--<th>Forename</th>--><th>Name</th>
                                                                         <td><input id="Names_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="Name_Input_Model" size="30" maxlength="30"></td>
                                                         </tr>
                                                         <tr>
@@ -250,12 +255,13 @@
                                                                         <td><input id="Email_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="Email_Input_Model" size="30" maxlength="30"></td>
                                                         </tr>
                                                         <tr>
-                                                                        <th>Telefono</th>
+                                                                        <!--<th>Phone</th>--><th>Phone</th>
                                                                         <td><input id="Phone_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="Phone_Input_Model" size="30" maxlength="12"></td>
                                                         </tr>
                                                         <tr>
                                                             <td></td>
-                                                            <td><br><button ng-click="AccessRequest()">Enviar</button></td>
+                                                            <!--<td><br><button ng-click="AccessRequest()">Enviar</button></td>-->
+                                                            <td><br><button ng-click="AccessRequest()">Send</button></td>
                                                         </tr>    
 
                                                 </table>
@@ -287,7 +293,7 @@
                 <!-- END OF MAIN AREA --------------------->
 
                         <div id="footer_bar" class="container">	
-                                <footer>2016 - Athelog Data Services</footer>
+                                <footer>2017 - Athelog Data Services</footer>
                         </div>
 
 

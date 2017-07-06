@@ -133,7 +133,7 @@ article {
 
 	<ul>
 		<a href="#">BICOYED Costa Rica</a>
-		<a href="#">Contacto +506 2253 5555, agomez@bicoyed.com</a>
+		<a href="#">Contact +506 2253 5555, agomez@bicoyed.com</a>
 	</ul>
 </div>
 <!-- END OF TOP BAR--------------->
@@ -141,7 +141,7 @@ article {
 <!-- HEADER AREA --------------------->
 <div id="header_area" class="container">	
 	<header>
-	   <h1>Sistema de Gestion</h1>
+	   <h1>HR System</h1>
 	</header>
 </div>
 <!-- END OF HEADER AREA  -------------->
@@ -150,8 +150,8 @@ article {
 <div id="menu_bar" class="container">
 	
 	<ul >
-		<a href="#">Bienvenido, UserID_Tag </a>
-                <button ng-click="Logout()">Salir</button>
+		<a href="#">Welcome, UserID_Tag </a>
+                <button ng-click="Logout()">Logout</button>
 	</ul>
 
 </div>
@@ -165,9 +165,9 @@ article {
 	<nav id="sidenav">
 	
 		<ul>
-                        <li><a href="../index/index.php">Indice</a></li>
-			<li><a href="#">Ayuda</a></li>
-			<li><a href="#">Acerca de</a></li>
+                        <li><a href="../index/index.php">Index</a></li>
+			<li><a href="#">Help</a></li>
+			<li><a href="#">About</a></li>
 		</ul>
 	</nav>
 	<!-- END OF SIDENAV MENU -->
@@ -180,15 +180,15 @@ article {
 		<div class="panel panel-default">
 			<div class="panel-body" id="content_panel">
 		  <ul class="nav nav-tabs">
-			<li class="active"><a data-toggle="tab" href="#home">Usuario</a></li>
-			<li><a data-toggle="tab" href="#menu2">Ayuda</a></li>
+			<li class="active"><a data-toggle="tab" href="#home">User</a></li>
+			<li><a data-toggle="tab" href="#menu2">Help</a></li>
 		  </ul>
 
 
 
 		  <div class="tab-content">
 			<div id="home" class="tab-pane fade in active">
-			  <h3>Busqueda por usuario</h3>
+			  <h3>Search user</h3>
 		  
 
 		  
@@ -197,26 +197,26 @@ article {
 						<table>
 						
 							<tr>
-								<td>Cedula</td><td><input id="UserID_Field" type="number"  runat="server" ng-init="inputVal=''" ng-model="UserID_Input_Model"></td>
+								<td>ID Number</td><td><input id="UserID_Field" type="number"  runat="server" ng-init="inputVal=''" ng-model="UserID_Input_Model"></td>
 							</tr>
 							<tr>
-								<td>Nombre</td><td><input id="Forename_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="Forename_Input_Model"></td>														
+								<td>Name</td><td><input id="Forename_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="Forename_Input_Model"></td>														
 							</tr>
 
 							<tr>
-								<td>Segundo Nombre</td><td><input id="MiddleName_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="MiddleName_Input_Model"></td>														
+								<td>Second name</td><td><input id="MiddleName_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="MiddleName_Input_Model"></td>														
 							</tr>							
 							
 							<tr>
-								<td>Primer Apellido</td><td><input id="FirstSurname_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="FirstSurname_Input_Model"></td>														
+								<td>First Surname</td><td><input id="FirstSurname_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="FirstSurname_Input_Model"></td>														
 							</tr>						
 						
 							<tr>
-								<td>Segundo Apellido</td><td><input id="SecondSurname_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="SecondSurname_Input_Model"></td>														
+								<td>Second Surname</td><td><input id="SecondSurname_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="SecondSurname_Input_Model"></td>														
 							</tr>	
 							
 							<tr>
-								<td>Telefono</td><td><input id="UserPhone_Field" type="number"  runat="server" ng-init="inputVal=''" ng-model="UserPhone_Input_Model"></td>														
+								<td>Phone</td><td><input id="UserPhone_Field" type="number"  runat="server" ng-init="inputVal=''" ng-model="UserPhone_Input_Model"></td>														
 							</tr>	
 
 							<tr>
@@ -224,7 +224,7 @@ article {
 							</tr>	
 
 							<tr>
-								<td>Empresa</td>
+								<td>Company</td>
 								<td><select ng-model="CompanyID_Input_Model" ng-options="item as item.CompanyID for item in CompanyList"></select></td>
 
 							</tr>						
@@ -234,7 +234,7 @@ article {
 							</tr>
 
 							<tr>
-									<td>Privilegios</td>
+									<td>UserGroup</td>
 									<td>
 										<select name="UserGroupSelect" class="form-control"  ng-model="UserGroupSelect_Input_Model"  required>
 											<option></option>
@@ -251,7 +251,7 @@ article {
 							<tr>
 								<td></td>
 								<td>
-									<button ng-click="SearchUser()">Buscar</button>
+									<button ng-click="SearchUser()">Search</button>
 								</td>
 							</tr>
 							

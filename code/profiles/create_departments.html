@@ -3,7 +3,7 @@
 	<!--<head> -->
 
 		
-		<title>Crear departamento</title> 
+		<title>Create departament</title> 
 		<meta charset="utf-8"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -134,8 +134,8 @@
 	<div id="top_bar" class="container">
 
 		<ul>
-			<a href="#">BICOYED Costa Rica</a>
-			<a href="#">Contacto +506 2253 5555, agomez@bicoyed.com</a>
+			<a href="#">Athelog</a>
+			<a href="#">Contact +506 8917-3644</a>
 		</ul>
 	</div>
 	<!-- END OF TOP BAR--------------->
@@ -143,7 +143,7 @@
 	<!-- HEADER AREA --------------------->
 	<div id="header_area" class="container">	
 		<header>
-		   <h1>Sistema de Gestion</h1>
+		   <h1>HR System</h1>
 		</header>
 	</div>
 	<!-- END OF HEADER AREA  -------------->
@@ -153,8 +153,8 @@
 		
 	
 		<ul >
-                    <a href="#">Bienvenido, UserID_Tag </a>
-                    <button ng-click="Logout()">Salir</button>
+                    <a href="#">Welcome, UserID_Tag </a>
+                    <button ng-click="Logout()">Logout</button>
 		</ul>
 
 	</div>
@@ -169,9 +169,9 @@
 		
 			
 			<ul>
-                                <li><a href="../index/index.php">Indice</a></li>
-				<li><a href="#">Ayuda</a></li>
-				<li><a href="#">Acerca de</a></li>
+                                <li><a href="../index/index.php">Index</a></li>
+				<li><a href="#">Help</a></li>
+				<li><a href="#">About</a></li>
 			</ul>
 		</nav>
 		<!-- END OF SIDENAV MENU -->
@@ -193,7 +193,7 @@
 
 			  <div class="tab-content">
 				<div id="home" class="tab-pane fade in active">
-				  <h3>Crear nuevo departamento</h3>
+				  <h3>Create new departament</h3>
 			  
         				
 			  
@@ -205,7 +205,7 @@
 							<!--FIXME:delete all ng-repeat and correct "valor actual"-->	
 
 								<tr>
-									<th>Departamentos existentes</th>
+									<th>Existing departments</th>
 									<th>Insertar nuevo</th>
 									<!--<th>Validacion</th>	-->
 								</tr>
@@ -236,17 +236,17 @@
 									<div class="modal-content">
 										<div class="modal-header">
 											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-											<h4 class="modal-title">Confirmacion</h4>
+											<h4 class="modal-title">Confirmation</h4>
 										</div>
 										<div class="modal-body">
-											<p>¿Crear departamento nuevo?</p>
-											<p class="text-warning"><small>Si NO guarda, los cambios se perderan</small></p>
+											<p>Create new department?</p>
+											<p class="text-warning"><small>If you DO NOT save, will loose the changes</small></p>
 											<!--<p class="text-info"><small><strong>Note:</strong> Press Tab key on the keyboard to enter inside the modal window after that press the Esc key. By default keyboard option is true that means modal hide on the press of escape key.</small></p>-->
 											<!--<p>{{Modal_Message}}</p>-->
 										</div>
 										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-											<button type="button" class="btn btn-primary" data-dismiss="modal" id="save-event" >Enviar</button>
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-primary" data-dismiss="modal" id="save-event" >Send</button>
 										</div>
 									</div>
 								</div>
@@ -260,7 +260,7 @@
 				</div><!-- End of patient tab -->			
 				
 				<div id="menu1" class="tab-pane fade">
-					<h3>Borrar departamento</h3>
+					<h3>Delete department</h3>
 					
 					<!-- controller for company search -->
 					<!--<div>-->
@@ -270,12 +270,12 @@
 							<!--FIXME:delete all ng-repeat and correct "valor actual"-->	
 
 								<tr>
-									<th>Departamentos existentes</th>
+									<th>Existing departments</th>
 								
 									<!--<th>Validacion</th>	-->
 								</tr>
 								<tr>
-                                                                    <td><select ng-model="DepartmentSelectForDelete_Input_Model" ng-options="item as item.DepartmentID for item in DepartmentList"></select></td>
+									<td><select ng-model="DepartmentSelectForDelete_Input_Model" ng-options="item as item.DepartmentID for item in DepartmentList"></select></td>
          
 								</tr>
 							
@@ -298,17 +298,17 @@
 									<div class="modal-content">
 										<div class="modal-header">
 											<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="x">×</button>
-											<h4 class="modal-title">Confirmacion</h4>
+											<h4 class="modal-title">Confirmation</h4>
 										</div>
 										<div class="modal-body">
-											<p>¿Borrar departamento seleccionado?</p>
-											<p class="text-warning"><small>Advertencia:la accion no se puede deshacer</small></p>
+											<p>Delete selected department?</p>
+											<p class="text-warning"><small>Warning:you cannot undo this action</small></p>
 											<!--<p class="text-info"><small><strong>Note:</strong> Press Tab key on the keyboard to enter inside the modal window after that press the Esc key. By default keyboard option is true that means modal hide on the press of escape key.</small></p>-->
 											<!--<p>{{Modal_Message}}</p>-->
 										</div>
 										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-											<button type="button" class="btn btn-primary" data-dismiss="modal" id="save-event2">Enviar</button>
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-primary" data-dismiss="modal" id="save-event2">Send</button>
 										</div>
 									</div>
 								</div>

@@ -3,7 +3,7 @@
 	<!--<head> -->
 
 		
-		<title>Ver perfil</title> 
+		<title>Check profile</title> 
 		<meta charset="utf-8"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -136,8 +136,8 @@
 		div id=top_bar
 
 		<ul>
-			<a href="#">BICOYED Costa Rica</a>
-			<a href="#">Contacto +506 2253 5555, agomez@bicoyed.com</a>
+			<a href="#">Athelog</a>
+			<a href="#">Contact +506 8917-3644</a>
 		</ul>
 	</div>
 	<!-- END OF TOP BAR--------------->
@@ -145,7 +145,7 @@
 	<!-- HEADER AREA --------------------->
 	<div id="header_area" class="container">	
 		<header>
-		   <h1>Sistema de Gestion</h1>
+		   <h1>HR System</h1>
 		</header>
 	</div>
 	<!-- END OF HEADER AREA  -------------->
@@ -154,8 +154,8 @@
 	<div id="menu_bar" class="container">
 		
 		<ul >
-                    <a href="#">Bienvenido, UserID_Tag </a>
-                    <button ng-click="Logout()">Salir</button>
+                    <a href="#">Welcome, UserID_Tag </a>
+                    <button ng-click="Logout()">Logout</button>
 		</ul>
 
 	</div>
@@ -169,9 +169,9 @@
 		<nav id="sidenav">
 					
 			<ul>
-                                <li><a href="../index/index.php">Indice</a></li>
-				<li><a href="#">Ayuda</a></li>
-				<li><a href="#">Acerca de</a></li>
+                                <li><a href="../index/index.php">Index</a></li>
+				<li><a href="#">Help</a></li>
+				<li><a href="#">About</a></li>
 				
 			</ul>
 		</nav>
@@ -193,7 +193,7 @@
 
 			  <div class="tab-content">
 				<div id="home" class="tab-pane fade in active">
-				  <h3>Ver paciente</h3>
+				  <h3>Check employee</h3>
 			  
 					<!-- controller for patient search -->
 					<div id="PatientController" ng-controller="dbCtrl" ng-init="Init('Patient')">
@@ -206,28 +206,28 @@
 								
 
 								<tr>
-									<th>Dato</th>
-									<th>Valor actual</th>
+									<th>Data</th>
+									<th>Current value</th>
 							
 								</tr>
 								<tr>
-									<th>Cedula</th>
+									<th>ID Number</th>
 									<td ng-repeat="patients in data">{{patients.PatientID}}</td>
 								</tr>
 								<tr>
-									<th>Nombre</th>
+									<th>Forename</th>
 									<td ng-repeat="patients in data">{{patients.Forename}}</td>
 								</tr>
 								<tr>
-									<th>Segundo Nombre</th>
+									<th>Second name</th>
 									<td ng-repeat="patients in data">{{patients.MiddleName}}</td>
 								</tr>
                                                                 <tr>
-									<th>Primer Apellido</th>
+									<th>First Surname</th>
 									<td ng-repeat="patients in data">{{patients.FirstSurname}}</td>
 								</tr>
 								<tr>
-									<th>Segundo Apellido</th>
+									<th>Second Surname</th>
 									<td ng-repeat="patients in data">{{patients.SecondSurname}}</td>
 								</tr>
 								<tr>
@@ -235,36 +235,36 @@
 									<td ng-repeat="patients in data">{{patients.Email}}</td>
 								</tr>
 								<tr>
-									<th>Telefono</th>
+									<th>Phone</th>
 									<td ng-repeat="patients in data">{{patients.Phone}}</td>
 								</tr>
 								<tr>
-									<th>Fecha Nacimiento(dd-mm-aaaa)</th>
+									<th>Date of birth(dd-mm-yyyy)</th>
 									<td ng-repeat="patients in data">{{patients.BirthDate}}</td>
 								</tr>
 								<tr>
-									<th>Fecha entrada al programa</th>
+									<th>Start date</th>
 									<td ng-repeat="patients in data">{{patients.JoinDate}}</td>
 								</tr>
 								<tr>
-									<th>Genero</th>
+									<th>Gender</th>
 									<td ng-repeat="patients in data">{{patients.Gender}}</td>
 									
 								</tr>
 								<tr>
-									<th>Direccion</th>
+									<th>Address</th>
 									<td ng-repeat="patients in data">{{patients.Address}}</td>
 								</tr>
 								<tr>
-									<th>Empresa</th>
+									<th>Company</th>
                                                                         <td ng-repeat="patients in data">{{patients.CompanyID}}</td>
                                                                 </tr>
 								<tr>
-									<th>Departamento</th>
+									<th>Departament</th>
 									<td ng-repeat="patients in data">{{patients.Department}}</td>
 								</tr>
 								<tr>
-									<th>Ingreso Mensual</th>
+									<th>Montly income</th>
 									<td ng-repeat="patients in data">{{patients.Income}}</td>
 								</tr>								
 							</table>	

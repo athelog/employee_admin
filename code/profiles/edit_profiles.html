@@ -3,7 +3,7 @@
 	<!--<head> -->
 
 		
-		<title>Editar perfil</title> 
+		<title>Edit profile</title> 
 		<meta charset="utf-8"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -136,8 +136,8 @@
 		div id=top_bar
 
 		<ul>
-			<a href="#">BICOYED Costa Rica</a>
-			<a href="#">Contacto +506 2253 5555, agomez@bicoyed.com</a>
+			<a href="#">Athelog</a>
+			<a href="#">Contact +506 8917-3644</a>
 		</ul>
 	</div>
 	<!-- END OF TOP BAR--------------->
@@ -145,7 +145,7 @@
 	<!-- HEADER AREA --------------------->
 	<div id="header_area" class="container">	
 		<header>
-		   <h1>Sistema de Gestion</h1>
+		   <h1>HR System</h1>
 		</header>
 	</div>
 	<!-- END OF HEADER AREA  -------------->
@@ -154,8 +154,8 @@
 	<div id="menu_bar" class="container">
 		
 		<ul >
-                    <a href="#">Bienvenido, UserID_Tag </a>
-                    <button ng-click="Logout()">Salir</button>
+                    <a href="#">Welcome, UserID_Tag </a>
+                    <button ng-click="Logout()">Logout</button>
 		</ul>
 
 	</div>
@@ -169,9 +169,9 @@
 		<nav id="sidenav">
 					
 			<ul>
-                                <li><a href="../index/index.php">Indice</a></li>
-				<li><a href="#">Ayuda</a></li>
-				<li><a href="#">Acerca de</a></li>
+                                <li><a href="../index/index.php">Index</a></li>
+				<li><a href="#">Help</a></li>
+				<li><a href="#">About</a></li>
 				
 			</ul>
 		</nav>
@@ -194,7 +194,7 @@
 
 			  <div class="tab-content">
 				<div id="home" class="tab-pane fade in active">
-				  <h3>Editar paciente</h3>
+				  <h3>Edit Employee</h3>
 			  
 					<!-- controller for patient search -->
 					<div id="PatientController" ng-controller="dbCtrl" ng-init="Init('Patient')">
@@ -207,37 +207,37 @@
 								
 
 								<tr>
-									<th>Dato</th>
-									<th>Valor actual</th>
-									<th>Valor nuevo</th>
+									<th>Data</th>
+									<th>Current value</th>
+									<th>New value</th>
 									<!--<th>Validación</th>	-->								
 								</tr>
 								<tr>
-									<th>Cedula</th>
+									<th>ID Number</th>
 									<td ng-repeat="patients in data">{{patients.PatientID}}</td>
 									<td><input name="PatientID_Field" type="number"  runat="server" ng-init="inputVal=''" ng-model="PatientID_Input_Model" required readonly></td>	
 									<!--<td>validation={{PatientForm.PatientID_Field.$valid}}</td>-->
 								</tr>
 								<tr>
-									<th>Nombre</th>
+									<th>Forename</th>
 									<td ng-repeat="patients in data">{{patients.Forename}}</td>
 									<td><input name="Forename_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="Forename_Input_Model" required></td>
 									<!--<td>validation={{PatientForm.Forename_Field.$valid}}</td>-->
 								</tr>
 								<tr>
-									<th>Segundo Nombre</th>
+									<th>Second name</th>
 									<td ng-repeat="patients in data">{{patients.MiddleName}}</td>
 									<td><input name="MiddleName_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="MiddleName_Input_Model" required></td>
 									<!--<td>validation={{PatientForm.Forename_Field.$valid}}</td>-->
 								</tr>
                                                                 <tr>
-									<th>Primer Apellido</th>
+									<th>First Surname</th>
 									<td ng-repeat="patients in data">{{patients.FirstSurname}}</td>
 									<td><input name="FirstSurname_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="FirstSurname_Input_Model" required></td>
 									<!--<td>validation={{PatientForm.FirstSurname_Field.$valid}}</td>-->
 								</tr>
 								<tr>
-									<th>Segundo Apellido</th>
+									<th>Second Surname</th>
 									<td ng-repeat="patients in data">{{patients.SecondSurname}}</td>
 									<td><input name="SecondSurname_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="SecondSurname_Input_Model" required></td>
 									<!--<td>validation={{PatientForm.SecondSurname_Field.$valid}}</td>-->
@@ -249,23 +249,23 @@
 									<!--<td>validation={{PatientForm.PatientEmail_Field.$valid}}</td>-->
 								</tr>
 								<tr>
-									<th>Telefono</th>
+									<th>Phone</th>
 									<td ng-repeat="patients in data">{{patients.Phone}}</td>
 									<td><input name="PatientPhone_Field" type="number"  runat="server" ng-init="inputVal=''" ng-model="PatientPhone_Input_Model" required></td>
 									<!--<td>validation={{PatientForm.PatientPhone_Field.$valid}}</td>-->
 								</tr>
 								<tr>
-									<th>Fecha Nacimiento(dd-mm-aaaa)</th>
+									<th>Date of birth(dd-mm-yyyy)</th>
 									<td ng-repeat="patients in data">{{patients.BirthDate}}</td>
 									<td><input name="BirthDate_Field" type="date"  runat="server" ng-init="inputVal=''" ng-model="BirthDate_Input_Model" required></td>
 									<!--<td>validation={{PatientForm.BirthDate_Field.$valid}}</td>-->
 								</tr>
 								<tr>
-									<th>Fecha entrada al programa</th>
+									<th>Start date</th>
 									<td ng-repeat="patients in data">{{patients.JoinDate}}</td>
 								</tr>
 								<tr>
-									<th>Genero</th>
+									<th>Gender</th>
 									<td ng-repeat="patients in data">{{patients.Gender}}</td>
 									<td>
 										<select name="GenderSelect" class="form-control"  ng-model="GenderSelect_Input_Model" required>
@@ -279,25 +279,25 @@
 									
 								</tr>
 								<tr>
-									<th>Direccion</th>
+									<th>Address</th>
 									<td ng-repeat="patients in data">{{patients.Address}}</td>
 									<td><input name="PatientAddress_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="PatientAddress_Input_Model" required></td>
 									<!--<td>validation={{PatientForm.PatientAddress_Field.$valid}}</td>-->
 								</tr>
 								<tr>
-									<th>Empresa</th>
+									<th>Company</th>
                                                                         <td ng-repeat="patients in data">{{patients.CompanyID}}</td>
                                                                         <td><select ng-model="CompanySelect_Input_Model" ng-options="item as item.CompanyID for item in CompanyList"></select></td>
 									<!--<td>validation={{PatientForm.CompanyIDSelect.$valid}}</td>-->								
                                                                 </tr>
 								<tr>
-									<th>Departamento</th>
+									<th>Departament</th>
 									<td ng-repeat="patients in data">{{patients.Department}}</td>
 									<td><select ng-model="DepartmentSelect_Input_Model" ng-options="item as item.DepartmentID for item in DepartmentList"></td>	
 									<!--<td>validation={{PatientForm.DepartmentSelect.$valid}}</td>	-->								
 								</tr>
 								<tr>
-									<th>Ingreso Mensual</th>
+									<th>Montly income</th>
 									<td ng-repeat="patients in data">{{patients.Income}}</td>
 									<td><input name="PatientIncome_Field" type="number"  runat="server" ng-init="inputVal=''" ng-model="PatientIncome_Input_Model" required></td>
 									<!--<td>validation={{PatientForm.PatientEmail_Field.$valid}}</td>-->
@@ -325,17 +325,17 @@
 									<div class="modal-content">
 										<div class="modal-header">
 											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-											<h4 class="modal-title">Confirmacion</h4>
+											<h4 class="modal-title">Confirmation</h4>
 										</div>
 										<div class="modal-body">
 											<p>¿Crear perfil de paciente con los siguientes datos?</p>
-											<p class="text-warning"><small>Si NO guarda, los cambios se perderan</small></p>
+											<p class="text-warning"><small>If you DO NOT save, will loose the changes</small></p>
 											<!--<p class="text-info"><small><strong>Note:</strong> Press Tab key on the keyboard to enter inside the modal window after that press the Esc key. By default keyboard option is true that means modal hide on the press of escape key.</small></p>-->
 											<!--<p>{{Modal_Message}}</p>-->
 										</div>
 										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-											<button type="button" class="btn btn-primary" data-dismiss="modal" id="save-event" >Enviar</button>
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-primary" data-dismiss="modal" id="save-event" >Send</button>
 										</div>
 									</div>
 								</div>
@@ -344,14 +344,14 @@
 						<!--end of patient popup modal -->
 						
 						<!--button to delete patient -->
-						<button ng-click="DeletePatient()">Borrar paciente</button>						
+						<button ng-click="DeletePatient()">Delete Employee</button>						
 						
 					</div><!-- ------- End of Search patient controller -->
 
 				</div><!-- End of patient tab -->			
 				
 				<div id="menu1" class="tab-pane fade">
-					<h3>Editar empresa</h3>
+					<h3>Ediit Company</h3>
 					
 					<!-- controller for company search -->
 					<div id="CompanyController" ng-controller="dbCtrl" ng-init="Init('Company')">  			
@@ -364,19 +364,19 @@
 									<table border="1px">										
 
 										<tr>
-											<th>Dato</th>
-											<th>Valor actual</th>
-											<th>Valor nuevo</th>
+											<th>Data</th>
+											<th>Current value</th>
+											<th>New value</th>
 											<!--<th>Validacion</th>-->	
 										</tr>
 										<tr>
-											<th>ID Empresa</th>
+											<th>Company ID</th>
 											<td ng-repeat="companies in data">{{companies.CompanyID}}</td>
 											<td><input name="CompanyID2_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="CompanyID2_Input_Model" no-special-char required></td>	
 											<!--<td>validation={{CompanyForm.CompanyID2_Field.$valid}}</td>-->
 										</tr>
 										<tr>
-											<th>Telefono</th>
+											<th>Phone</th>
 											<td ng-repeat="companies in data">{{companies.Phone}}</td>
 											<td><input name="CompanyPhone_Field" type="number"  runat="server" ng-init="inputVal=''" ng-model="CompanyPhone_Input_Model" required></td>
 											<!--<td>validation={{CompanyForm.CompanyPhone_Field.$valid}}</td>-->
@@ -388,11 +388,11 @@
 											<!--<td>validation={{CompanyForm.CompanyEmail_Field.$valid}}</td>-->
 										</tr>
 										<tr>
-											<th>Fecha entrada al programa</th>
+											<th>Start date</th>
 										</tr>
 
 										<tr>
-											<th>Direccion</th>
+											<th>Address</th>
 											<td ng-repeat="companies in data">{{companies.Address}}</td>
 											<td><input name="CompanyAddress_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="CompanyAddress_Input_Model" required></td>
 											<!--<td>validation={{CompanyForm.CompanyAddress_Field.$valid}}</td>-->
@@ -424,17 +424,17 @@
 									<div class="modal-content">
 										<div class="modal-header">
 											<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="x">×</button>
-											<h4 class="modal-title">Confirmacion</h4>
+											<h4 class="modal-title">Confirmation</h4>
 										</div>
 										<div class="modal-body">
-											<p>¿Crear perfil de empresa con los siguientes datos?</p>
-											<p class="text-warning"><small>Si NO guarda, los cambios se perderan</small></p>
+											<p>Create Company profile with this data?</p>
+											<p class="text-warning"><small>If you DO NOT save, will lose the changes</small></p>
 											<!--<p class="text-info"><small><strong>Note:</strong> Press Tab key on the keyboard to enter inside the modal window after that press the Esc key. By default keyboard option is true that means modal hide on the press of escape key.</small></p>-->
 											<!--<p>{{Modal_Message}}</p>-->
 										</div>
 										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-											<button type="button" class="btn btn-primary" data-dismiss="modal" id="save-event2">Enviar</button>
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-primary" data-dismiss="modal" id="save-event2">Send</button>
 										</div>
 									</div>
 								</div>
@@ -446,7 +446,7 @@
                                                  
                                                 
 						<!--button to delete company -->
-						<button ng-click="DeleteCompany()">Borrar paciente</button>
+						<button ng-click="DeleteCompany()">Delete company</button>
 						
 					</div><!-- End of controller for Company -->	
 					

@@ -3,7 +3,7 @@
 	<!--<head> -->
 
 		
-		<title>Ver perfil</title> 
+		<title>Check profile</title> 
 		<meta charset="utf-8"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -136,8 +136,8 @@
 		div id=top_bar
 
 		<ul>
-			<a href="#">BICOYED Costa Rica</a>
-			<a href="#">Contacto +506 2253 5555, agomez@bicoyed.com</a>
+			<a href="#">Athelog</a>
+			<a href="#">Contact +506 8917-3644</a>
 		</ul>
 	</div>
 	<!-- END OF TOP BAR--------------->
@@ -145,7 +145,7 @@
 	<!-- HEADER AREA --------------------->
 	<div id="header_area" class="container">	
 		<header>
-		   <h1>Sistema de Gestion</h1>
+		   <h1>HR System</h1>
 		</header>
 	</div>
 	<!-- END OF HEADER AREA  -------------->
@@ -154,8 +154,8 @@
 	<div id="menu_bar" class="container">
 		
 		<ul >
-                    <a href="#">Bienvenido, UserID_Tag </a>
-                    <button ng-click="Logout()">Salir</button>
+                    <a href="#">Welcome, UserID_Tag </a>
+                    <button ng-click="Logout()">Logout</button>
 		</ul>
 
 	</div>
@@ -169,9 +169,9 @@
 		<nav id="sidenav">
 					
 			<ul>
-                                <li><a href="../index/index.php">Indice</a></li>
-				<li><a href="#">Ayuda</a></li>
-				<li><a href="#">Acerca de</a></li>
+                                <li><a href="../index/index.php">Index</a></li>
+				<li><a href="#">Help</a></li>
+				<li><a href="#">About</a></li>
 				
 			</ul>
 		</nav>
@@ -194,7 +194,7 @@
 			  <div class="tab-content">
 				
 				<div id="menu1" class="tab-pane fade in active">
-					<h3>Ver empresa</h3>
+					<h3>Check company</h3>
 					
 					<!-- controller for company search -->
 					<div id="CompanyController" ng-controller="dbCtrl" ng-init="Init('Company')">  			
@@ -207,16 +207,16 @@
 									<table border="1px">										
 
 										<tr>
-											<th>Dato</th>
-											<th>Valor actual</th>
+											<th>Data</th>
+											<th>Current value</th>
 
 										</tr>
 										<tr>
-											<th>ID Empresa</th>
+											<th>Company ID</th>
 											<td ng-repeat="companies in data">{{companies.CompanyID}}</td>
 										</tr>
 										<tr>
-											<th>Telefono</th>
+											<th>Phone</th>
 											<td ng-repeat="companies in data">{{companies.Phone}}</td>
 										</tr>
 										<tr>
@@ -224,11 +224,11 @@
 											<td ng-repeat="companies in data">{{companies.Email}}</td>
 										</tr>
 										<tr>
-											<th>Fecha entrada al programa</th>
+											<th>Start date</th>
 										</tr>
 
 										<tr>
-											<th>Direccion</th>
+											<th>Address</th>
 											<td ng-repeat="companies in data">{{companies.Address}}</td>
 										</tr>
 										
