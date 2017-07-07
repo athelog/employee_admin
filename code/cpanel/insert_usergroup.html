@@ -3,7 +3,7 @@
 	<!--<head> -->
 
 		
-		<title>Agregar roles</title> 
+		<title>Add roles</title> 
 		<meta charset="utf-8"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -136,8 +136,8 @@
 		div id=top_bar
 
 		<ul>
-			<a href="#">BICOYED Costa Rica</a>
-			<a href="#">Contacto +506 2253 5555, agomez@bicoyed.com</a>
+			<a href="#">Athelog</a>
+			<a href="#">Contact info@athelog.net</a>
 		</ul>
 	</div>
 	<!-- END OF TOP BAR--------------->
@@ -145,7 +145,7 @@
 	<!-- HEADER AREA --------------------->
 	<div id="header_area" class="container">	
 		<header>
-		   <h1>Sistema de Gestion</h1>
+		   <h1>HR System</h1>
 		</header>
 	</div>
 	<!-- END OF HEADER AREA  -------------->
@@ -154,7 +154,7 @@
 	<div id="menu_bar" class="container">
 		
 		<ul >
-			<a href="#">Bienvenido, UserID_Tag</a><button ng-click="Logout()">Salir</button>
+			<a href="#">Welcome, UserID_Tag</a><button ng-click="Logout()">Logout</button>
 		</ul>
 
 	</div>
@@ -168,9 +168,9 @@
 		<nav id="sidenav">
 					
 			<ul>
-                                <li><a href="../index/index.php">Indice</a></li>
-				<li><a href="#">Ayuda</a></li>
-				<li><a href="#">Acerca de</a></li>
+                                <li><a href="../index/index.php">Index</a></li>
+				<li><a href="#">Help</a></li>
+				<li><a href="#">About</a></li>
 				
 			</ul>
 		</nav>
@@ -192,7 +192,7 @@
 
 			  <div class="tab-content">
 				<div id="home" class="tab-pane fade in active">
-				  <h3>Agregar roles</h3>
+				  <h3>Add roles</h3>
 			  
 
 			  
@@ -204,41 +204,41 @@
 							<!--FIXME:delete all ng-repeat and correct "valor actual"-->	
 
 								<tr>
-									<th>Dato</th>
-									<th>Valor Actual</th>
+									<th>Data</th>
+									<th>Current Value</th>
 									<th>Empresa/Permiso nuevo</th>
 									<!--<th>Validacion</th>	-->
 								</tr>
 								<tr>
-									<th>Cedula</th>
+									<th>ID Number</th>
 									<td ng-repeat="users in data">{{users.UserID}}</td>
 									<td><input name="UserID_Field" type="number"  runat="server" ng-init="inputVal='{{users.UserID}}'" ng-model="UserID_Input_Model" STYLE="background-color:grey;" readonly></td>	
 									
 									<!--<td>validation={{PatientForm.PatientID_Field.$valid}}</td>-->
 								</tr>
 								<tr>
-									<th>Nombre</th>
+									<th>Forename</th>
 									<td ng-repeat="users in data">{{users.Forename}}</td>
 									<td><input name="Forename_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="Forename_Input_Model" STYLE="background-color:grey;" readonly></td>
 									
 									<!--<td>validation={{PatientForm.Forename_Field.$valid}}</td>-->
 								</tr>
 								<tr>
-									<th>Segundo Nombre</th>
+									<th>Second Name</th>
 									<td ng-repeat="users in data">{{users.MiddleName}}</td>
 									<td><input name="FirstSurname_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="MiddleName_Input_Model" STYLE="background-color:grey;" readonly></td>
 									
 									<!--<td>validation={{PatientForm.FirstSurname_Field.$valid}}</td>-->
 								</tr>									
 								<tr>
-									<th>Primer Apellido</th>
+									<th>First Surname</th>
 									<td ng-repeat="users in data">{{users.FirstSurname}}</td>
 									<td><input name="FirstSurname_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="FirstSurname_Input_Model" STYLE="background-color:grey;" readonly></td>
 									
 									<!--<td>validation={{PatientForm.FirstSurname_Field.$valid}}</td>-->
 								</tr>
 								<tr>
-									<th>Segundo Apellido</th>
+									<th>Second Surname</th>
 									<td ng-repeat="users in data">{{users.SecondSurname}}</td>
 									<td><input name="SecondSurname_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="SecondSurname_Input_Model" STYLE="background-color:grey;" readonly></td>
 									
@@ -252,21 +252,21 @@
 									<!--<td>validation={{PatientForm.PatientEmail_Field.$valid}}</td>-->
 								</tr>
 								<tr>
-									<th>Telefono</th>
+									<th>Phone</th>
 									<td ng-repeat="users in data">{{users.Phone}}</td>
 									<td><input name="UserPhone_Field" type="number"  runat="server" ng-init="inputVal=''" ng-model="UserPhone_Input_Model" STYLE="background-color:grey;" readonly></td>
 									<!--<td>validation={{PatientForm.PatientPhone_Field.$valid}}</td>-->
 								</tr>
 
 								<tr>
-									<th>Empresa</th>
+									<th>Company</th>
 									<td ng-repeat="users in data">{{users.CompanyID}}</td>
 									<td><select ng-model="CompanyID_Input_Model" ng-options="item as item.CompanyID for item in CompanyList"></select></td>
 									<!--<td>validation={{PatientForm.CompanyIDSelect.$valid}}</td>-->								
 								</tr>
 								</tr>
 								<tr>
-									<th>Privilegios</th>
+									<th>UserGroup</th>
 									<td ng-repeat="users in data">{{users.UserGroup}}</td>
 									<td>
 										<select name="UserGroupSelect" class="form-control"  ng-model="UserGroupSelect_Input_Model"  required>
@@ -306,17 +306,17 @@
 									<div class="modal-content">
 										<div class="modal-header">
 											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-											<h4 class="modal-title">Confirmacion</h4>
+											<h4 class="modal-title">Confirmation</h4>
 										</div>
 										<div class="modal-body">
-											<p>¿Guardar perfil de usuario con los siguientes datos?</p>
-											<p class="text-warning"><small>Si NO guarda, los cambios se perderan</small></p>
+											<p>Save user profile with the next data?</p>
+											<p class="text-warning"><small>If you don't save, changes will be lost</small></p>
 											<!--<p class="text-info"><small><strong>Note:</strong> Press Tab key on the keyboard to enter inside the modal window after that press the Esc key. By default keyboard option is true that means modal hide on the press of escape key.</small></p>-->
 											<!--<p>{{Modal_Message}}</p>-->
 										</div>
 										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-											<button type="button" class="btn btn-primary" data-dismiss="modal" id="save-event" >Enviar</button>
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-primary" data-dismiss="modal" id="save-event" >Send</button>
 										</div>
 									</div>
 								</div>
@@ -325,8 +325,8 @@
 						<!--end of user popup modal -->
 						
 						<!--button to delete patient -->
-						<button ng-click="DeletePatient()">Borrar paciente</button>
-						<button ng-click="GeneratePassword()">Generar clave</button>						
+						<button ng-click="DeletePatient()">Delete patient</button>
+						<button ng-click="GeneratePassword()">Generate password</button>						
 						
 					
 

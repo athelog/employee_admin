@@ -4,7 +4,7 @@
 
 
 	
-	<title>Usuarios</title> 
+	<title>Users</title> 
 	<meta charset="utf-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -132,8 +132,8 @@ article {
 <div id="top_bar" class="container">
 
 	<ul>
-		<a href="#">BICOYED Costa Rica</a>
-		<a href="#">Contacto +506 2253 5555, agomez@bicoyed.com</a>
+		<a href="#">Athelog</a>
+		<a href="#">Contact info@athelog.net</a>
 	</ul>
 </div>
 <!-- END OF TOP BAR--------------->
@@ -141,7 +141,7 @@ article {
 <!-- HEADER AREA --------------------->
 <div id="header_area" class="container">	
 	<header>
-	   <h1>Sistema de Gestion</h1>
+	   <h1>HR System</h1>
 	</header>
 </div>
 <!-- END OF HEADER AREA  -------------->
@@ -150,8 +150,8 @@ article {
 <div id="menu_bar" class="container">
 	
 	<ul >
-		<a href="#">Bienvenido, UserID_Tag </a>
-                <button ng-click="Logout()">Salir</button>
+		<a href="#">Welcome, UserID_Tag </a>
+                <button ng-click="Logout()">Logout</button>
 	</ul>
 
 </div>
@@ -165,9 +165,9 @@ article {
 	<nav id="sidenav">
 	
 		<ul>
-                        <li><a href="../index/index.php">Indice</a></li>
-			<li><a href="#">Ayuda</a></li>
-			<li><a href="#">Acerca de</a></li>
+                        <li><a href="../index/index.php">Index</a></li>
+			<li><a href="#">Help</a></li>
+			<li><a href="#">About</a></li>
 		</ul>
 	</nav>
 	<!-- END OF SIDENAV MENU -->
@@ -188,7 +188,7 @@ article {
 
 		  <div class="tab-content">
 			<div id="home" class="tab-pane fade in active">
-			  <h3>Usuarios marcados para borrar</h3>
+			  <h3>Users flagged for deletion</h3>
 		  
 
 					<!--------- Search results ------->
@@ -197,13 +197,13 @@ article {
 						<table class="table table-hover">
 							<thead>
 								<tr>
-									<th>Cedula</th>
-									<th>Nombre</th>
-									<th>Primer Apellido</th>
-									<th>Segundo Apellido</th>
+									<th>ID Number</th>
+									<th>Forename</th>
+									<th>First Surname</th>
+									<th>Second Surname</th>
 									<th>Email</th>
-									<th>Empresa</th>
-									<th>Privilegios</th>
+									<th>Company</th>
+									<th>UserGroup</th>
 									<th>Status</th>
 									<th>Seleccionar</th>
 								</tr>
@@ -225,7 +225,7 @@ article {
 							</tbody>
 						</table>
 
-                                                <button ng-click="ConfirmFFDUser()">Borrar</button>
+                                                <button ng-click="ConfirmFFDUser()">Delete</button>
                                                 
 					</div><!--------- End of Search results ------->				
 					

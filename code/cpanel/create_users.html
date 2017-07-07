@@ -2,7 +2,7 @@
 	<!--<head> -->
 
 		
-		<title>Crear usuario</title> 
+		<title>Create user</title> 
 		<meta charset="utf-8"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -133,8 +133,8 @@
 	<div id="top_bar" class="container">
 
 		<ul>
-			<a href="#">BICOYED Costa Rica</a>
-			<a href="#">Contacto +506 2253 5555, agomez@bicoyed.com</a>
+			<a href="#">Athelog</a>
+			<a href="#">Contact info@athelog.net</a>
 		</ul>
 	</div>
 	<!-- END OF TOP BAR--------------->
@@ -142,7 +142,7 @@
 	<!-- HEADER AREA --------------------->
 	<div id="header_area" class="container">	
 		<header>
-		   <h1>Sistema de Gestion</h1>
+		   <h1>HR System</h1>
 		</header>
 	</div>
 	<!-- END OF HEADER AREA  -------------->
@@ -152,7 +152,7 @@
 		
 	
 		<ul >
-			<a href="#">Bienvenido, UserID_Tag</a><button ng-click="Logout()">Salir</button>
+			<a href="#">Welcome, UserID_Tag</a><button ng-click="Logout()">Logout</button>
 		</ul>
 
 	</div>
@@ -169,7 +169,7 @@
 			<ul>
                                 <li><a href="../index/index.php">Indice</a></li>
                                 <li><a href="#">Ayuda</a></li>
-				<li><a href="#">Acerca de</a></li>
+				<li><a href="#">About</a></li>
                                 
 			</ul>
 		</nav>
@@ -191,7 +191,7 @@
 
 			  <div class="tab-content">
 				<div id="home" class="tab-pane fade in active">
-				  <h3>Crear nuevo usuario</h3>
+				  <h3>Create new user</h3>
 			  
 
 			  
@@ -203,32 +203,32 @@
 							<!--FIXME:delete all ng-repeat and correct "valor actual"-->	
 
 								<tr>
-									<th>Dato</th>
-									<th>Editar valor</th>
+									<th>Data</th>
+									<th>Edit value</th>
 									<!--<th>Validacion</th>	-->
 								</tr>
 								<tr>
-									<th>Cedula</th>
+									<th>ID Number</th>
 									<td><input name="UserID_Field" type="number"  runat="server" ng-init="inputVal=''" ng-model="UserID_Input_Model" required></td>	
 									<!--<td>validation={{PatientForm.PatientID_Field.$valid}}</td>-->
 								</tr>
 								<tr>
-									<th>Nombre</th>
+									<th>Forename</th>
 									<td><input name="Forename_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="Forename_Input_Model" required></td>
 									<!--<td>validation={{PatientForm.Forename_Field.$valid}}</td>-->
 								</tr>
 								<tr>
-									<th>Segundo Nombre</th>
+									<th>Second Name</th>
 									<td><input id="MiddleName_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="MiddleName_Input_Model"></td>
 									<!--<td>validation={{PatientForm.Forename_Field.$valid}}</td>-->
 								</tr>								
 								<tr>
-									<th>Primer Apellido</th>
+									<th>First Surname</th>
 									<td><input name="FirstSurname_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="FirstSurname_Input_Model" required></td>
 									<!--<td>validation={{PatientForm.FirstSurname_Field.$valid}}</td>-->
 								</tr>
 								<tr>
-									<th>Segundo Apellido</th>
+									<th>Second Surname</th>
 									<td><input name="SecondSurname_Field" type="text"  runat="server" ng-init="inputVal=''" ng-model="SecondSurname_Input_Model" required></td>
 									<!--<td>validation={{PatientForm.SecondSurname_Field.$valid}}</td>-->
 								</tr>
@@ -238,21 +238,21 @@
 									<!--<td>validation={{PatientForm.PatientEmail_Field.$valid}}</td>-->
 								</tr>
 								<tr>
-									<th>Telefono</th>
+									<th>Phone</th>
 									<td><input name="UserPhone_Field" type="number"  runat="server" ng-init="inputVal=''" ng-model="UserPhone_Input_Model" required></td>
 									<!--<td>validation={{PatientForm.PatientPhone_Field.$valid}}</td>-->
 								</tr>
 								<tr>
-									<th>Fecha entrada al programa</th>
+									<th>Start date</th>
 									<td>FIXME:add date</td>
 								</tr>
 								<tr>
-									<th>Empresa</th>
+									<th>Company</th>
 									<td><select ng-model="CompanyID_Input_Model" ng-options="item as item.CompanyID for item in CompanyList"></select></td>
 									<!--<td>validation={{PatientForm.CompanyIDSelect.$valid}}</td>-->								
 								</tr>
 								<tr>
-									<th>Privilegios</th>
+									<th>UserGroup</th>
 									<td>
 										<select name="UserGroupSelect" class="form-control"  ng-model="UserGroupSelect_Input_Model"  required>
 											<option></option>
@@ -301,17 +301,17 @@
 									<div class="modal-content">
 										<div class="modal-header">
 											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-											<h4 class="modal-title">Confirmacion</h4>
+											<h4 class="modal-title">Confirmation</h4>
 										</div>
 										<div class="modal-body">
-											<p>¿Crear perfil de usuario con los siguientes datos?</p>
-											<p class="text-warning"><small>Si NO guarda, los cambios se perderan</small></p>
+											<p>Create user profile with next data?</p>
+											<p class="text-warning"><small>If you don't save, changes will be lost</small></p>
 											<!--<p class="text-info"><small><strong>Note:</strong> Press Tab key on the keyboard to enter inside the modal window after that press the Esc key. By default keyboard option is true that means modal hide on the press of escape key.</small></p>-->
 											<!--<p>{{Modal_Message}}</p>-->
 										</div>
 										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-											<button type="button" class="btn btn-primary" data-dismiss="modal" id="save-event" >Enviar</button>
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-primary" data-dismiss="modal" id="save-event" >Send</button>
 										</div>
 									</div>
 								</div>
