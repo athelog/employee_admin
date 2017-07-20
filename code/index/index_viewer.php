@@ -158,7 +158,7 @@ echo
                 <!-- HEADER AREA --------------------->
                 <div id="header_area" class="container">	
                         <header>
-                           <h1>Sistema de Gestion</h1>
+                           <h1>HR System</h1>
                         </header>
                 </div>
                 <!-- END OF HEADER AREA  -------------->
