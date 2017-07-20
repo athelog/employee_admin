@@ -122,6 +122,8 @@ var fetch = angular.module('fetch', []);
                 }
                 //eof
 		
+		
+		
 		//2.5 validating input field to prevent the user to enter invalid words or chars
 		//returns true is field value is valid
 		//forbidden substring: ADD, ALTER, AND, CREATE, DELETE, DROP,  EXISTS, IF, INSERT, LIKE, OR, SELECT, UNION, UPDATE, WHERE
@@ -236,6 +238,8 @@ var fetch = angular.module('fetch', []);
                             //alert("value is 1");
                             //window.location.replace("../profiles/sp.php");
                             window.location.replace("../index/index.php");
+						}else if(OutputType=="data"){
+							$scope.data=data;
                         }else if($scope.LoginData==0){
                             alert("ERROR - Datos de acceso incorrectos");
                             
@@ -253,14 +257,14 @@ var fetch = angular.module('fetch', []);
 		$scope.DummyLogin = function(){
 			
 			
-			alert("Bienvenido!");
+			alert("Welcome!");
 			/*
 			ResetUserFieldValues();
 			ReadUserFields();
 			
 			if (UserData.UserID_FieldValue == "admin" && UserData.Password_FieldValue == "admin"){
 				
-				alert("Bienvenido!");
+				alert("Welcome!");
 				
 							
 			}else{
@@ -339,6 +343,18 @@ var fetch = angular.module('fetch', []);
 
 		}
 		//eof	
+		
+		//logout function
+		$scope.Logout = function(){
+    
+			var URL = "../engine/dBInterface.php?ActionDBToken=Logout";
+			//alert("(DEBUG)Logout()-Logging off");
+			CalldBEngine(URL,"data");
+			Redirect("../index/login.html");
+			
+		}
+		//eof
+		
 		
 		
 		//debug function

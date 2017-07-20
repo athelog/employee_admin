@@ -9,7 +9,7 @@ var fetch = angular.module('fetch', []);
 		
 		//------------2. PROGRAM VARS (DON'T TOUCH) -------
 		
-		//alert("(DEBUG)Welcome to profile screen v1.59");
+		alert("(DEBUG)Welcome to profile screen v1.60");
 		
 		//globals to hide Patient/Company text
 		//FIXME:check if this is really required

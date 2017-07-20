@@ -168,8 +168,8 @@ echo
 
 
                         <ul >
-                            <a href="#">Bienvenido, UserID_Tag </a>
-                            <button ng-click="Logout()">Salir</button>                        
+                            <a href="#">Welcome, UserID_Tag </a>
+                            <button ng-click="Logout()">Logout</button>                        
                         </ul>
 
                 </div>
